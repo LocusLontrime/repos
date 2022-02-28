@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork", "HomeWork.csproj", "{652FFA64-133B-4C14-A276-D4EE72F51417}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task46(GeometricShape)", "Task46(GeometricShape).csproj", "{652FFA64-133B-4C14-A276-D4EE72F51417}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task26", "..\Task26\Task26.csproj", "{F1EC74B1-D2AF-4F82-B7D7-F81FB7A78DE0}"
 EndProject
