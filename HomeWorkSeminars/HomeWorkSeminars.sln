@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task4", "..\Sem1T5\Sem1Task4.csproj", "{93702B7B-134D-4943-800F-87C48D835105}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task2", "Sem1Task2\Sem1Task2.csproj", "{0BF2988E-2696-44BD-914F-27B34477C108}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task3", "Sem1Task3\Sem1Task3.csproj", "{7154ACF3-0B35-46B4-9C5E-95633D1885BE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaysOfTheWeek", "DaysOfTheWeek\DaysOfTheWeek.csproj", "{DC76C622-89CB-4B48-8159-6D20144226FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem1Task5", "Sem1Task5\Sem1Task5.csproj", "{5E934DF8-DB9D-46DA-B242-3958BA499B49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task5", "Sem1Task5\Sem1Task5.csproj", "{5E934DF8-DB9D-46DA-B242-3958BA499B49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem1Task6", "Sem1Task6\Sem1Task6.csproj", "{5F8B281F-CA41-4C35-A698-01F17D617F38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task6", "Sem1Task6\Sem1Task6.csproj", "{5F8B281F-CA41-4C35-A698-01F17D617F38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem1Task7", "Sem1Task7\Sem1Task7.csproj", "{5E9476E5-CF3D-4E18-A25C-657435EBE0B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task7", "Sem1Task7\Sem1Task7.csproj", "{5E9476E5-CF3D-4E18-A25C-657435EBE0B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem1Task8", "Sem1Task8\Sem1Task8.csproj", "{CE81D2F9-B9B9-4AAB-9DC5-374A00F83115}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task8", "Sem1Task8\Sem1Task8.csproj", "{CE81D2F9-B9B9-4AAB-9DC5-374A00F83115}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem1Task9", "Sem1Task9\Sem1Task9.csproj", "{F9181520-F832-49A1-8CAD-DF0F93871528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task9", "Sem1Task9\Sem1Task9.csproj", "{F9181520-F832-49A1-8CAD-DF0F93871528}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task1", "Sem1Task1\Sem1Task1.csproj", "{AA1914DD-7660-424D-91DA-98BEA119EFAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem1Task4", "Sem1Task4\Sem1Task4.csproj", "{C4FAC581-60D5-4C62-ACFD-297C0C3065F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{93702B7B-134D-4943-800F-87C48D835105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93702B7B-134D-4943-800F-87C48D835105}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93702B7B-134D-4943-800F-87C48D835105}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93702B7B-134D-4943-800F-87C48D835105}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0BF2988E-2696-44BD-914F-27B34477C108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BF2988E-2696-44BD-914F-27B34477C108}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BF2988E-2696-44BD-914F-27B34477C108}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +65,10 @@ Global
 		{AA1914DD-7660-424D-91DA-98BEA119EFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA1914DD-7660-424D-91DA-98BEA119EFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA1914DD-7660-424D-91DA-98BEA119EFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FAC581-60D5-4C62-ACFD-297C0C3065F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FAC581-60D5-4C62-ACFD-297C0C3065F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FAC581-60D5-4C62-ACFD-297C0C3065F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FAC581-60D5-4C62-ACFD-297C0C3065F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
