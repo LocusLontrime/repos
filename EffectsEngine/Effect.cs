@@ -23,7 +23,7 @@ public class Effect {
     public HealingEff healingEff { get; set; }
 
     public ShieldEff shieldEff { get; set; }   
-   
+    
 
 }
 
