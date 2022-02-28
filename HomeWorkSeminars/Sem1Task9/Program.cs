@@ -1,6 +1,6 @@
 ﻿public class Sem1Task9 { // Найти третью цифру числа или сообщить, что её нет
 
-    public static void Main(string[] args)
+    public static void Main(string[] args) // solution without MAth lib and SomeString.Length method
     {
         Console.WriteLine("Enter a number");
         int number = int.Parse(Console.ReadLine());
