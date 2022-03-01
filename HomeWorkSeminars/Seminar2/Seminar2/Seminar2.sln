@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem2Task2", "..\Sem2Task2\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem2Task3", "..\Sem2Task3\Sem2Task3.csproj", "{26262AF7-846D-4805-9C55-7E62E5C11662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem2Task4", "..\Sem2Task4\Sem2Task4.csproj", "{E206BC80-0353-49BA-9A77-B5C9FFCFB879}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem2Task3version2", "..\Sem2Task4\Sem2Task3version2.csproj", "{E206BC80-0353-49BA-9A77-B5C9FFCFB879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem2Hometask1", "..\Sem2Hometask1\Sem2Hometask1.csproj", "{30427D80-0383-458B-854B-C26E722262DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E206BC80-0353-49BA-9A77-B5C9FFCFB879}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E206BC80-0353-49BA-9A77-B5C9FFCFB879}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E206BC80-0353-49BA-9A77-B5C9FFCFB879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30427D80-0383-458B-854B-C26E722262DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30427D80-0383-458B-854B-C26E722262DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30427D80-0383-458B-854B-C26E722262DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30427D80-0383-458B-854B-C26E722262DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
