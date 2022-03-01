@@ -7,7 +7,7 @@
         int oldNumber = n;
         int newNumber = 0;
 
-        while (n > 0) {
+        while (n > 0) { // 12345 -> 54321
             newNumber *= 10;
             newNumber += n % 10;
             n /= 10;
