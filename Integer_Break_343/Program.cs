@@ -48,7 +48,7 @@ public class IntegerBreak343 { // accepted (speed: 20ms, ultra-fast, beats 98,83
         return memoTable[N];
     }
 
-    public static BigInteger recursiveSeekerFast(int N) // a fast one, can be easily rewritten to a bottom-up version
+    public static BigInteger recursiveSeekerFast(int N) // a fast one -> O(n), can be easily rewritten to a bottom-up version
     {
         recursiveCounter++;
 
