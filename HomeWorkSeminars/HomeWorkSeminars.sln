@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task9", "Sem1Task9\Sem1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task1", "Sem1Task1\Sem1Task1.csproj", "{AA1914DD-7660-424D-91DA-98BEA119EFAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sem1Task4", "Sem1Task4\Sem1Task4.csproj", "{C4FAC581-60D5-4C62-ACFD-297C0C3065F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sem1Task4", "Sem1Task4\Sem1Task4.csproj", "{C4FAC581-60D5-4C62-ACFD-297C0C3065F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

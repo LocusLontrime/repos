@@ -1,4 +1,4 @@
-﻿public class PlusOne {
+﻿public class PlusOne66 {
 
     static void Main(string[] args)
     {

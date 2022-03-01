@@ -5,7 +5,7 @@ public class Akkerman {
     static void Main(string[] args)
     {
 
-        Console.WriteLine(AkkermanRecursion(3, 5));
+        Console.WriteLine(AkkermanRecursion(4, 4));
 
         BigInteger bigInteger = new BigInteger(new byte[] {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0});
 

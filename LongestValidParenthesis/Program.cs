@@ -1,4 +1,4 @@
-﻿public class LongestValidParentheses { // accepted (speed: 48ms, incredibly fast, beats 100% of C# submissions) //
+﻿public class LongestValidParentheses32 { // accepted (speed: 48ms, incredibly fast, beats 100% of C# submissions) //
 
     static void Main(string[] args)
     {
