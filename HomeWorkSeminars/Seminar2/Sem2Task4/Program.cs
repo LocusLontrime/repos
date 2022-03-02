@@ -13,6 +13,8 @@
             n /= 10;
         }
 
+        Console.WriteLine("number = " + newNumber);
+
         if (newNumber == oldNumber) Console.WriteLine(oldNumber + " is Palindrom");
         else Console.WriteLine(oldNumber + " is not Palindrom");        
     }    

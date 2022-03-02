@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integer_Break_343", "..\Int
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maximize_Number_of_Nice_Divisors_1808", "..\Maximize_Number_of_Nice_Divisors_1808\Maximize_Number_of_Nice_Divisors_1808.csproj", "{A7D6EB67-B6D6-484E-8BDD-C65070468BD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maximum_Product_Subarray_152", "..\Maximum_Product_Subarray_152\Maximum_Product_Subarray_152.csproj", "{B15A0B1D-000D-43E4-ACB0-41DB7332C69B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maximum_Product_Subarray_152", "..\Maximum_Product_Subarray_152\Maximum_Product_Subarray_152.csproj", "{B15A0B1D-000D-43E4-ACB0-41DB7332C69B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Largest_Number_At_Least_Twice_of_Others_747", "..\Largest_Number_At_Least_Twice_of_Others_747\Largest_Number_At_Least_Twice_of_Others_747.csproj", "{A9BFAAC7-2C2E-45BD-AD69-7F3AB7E0E541}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{B15A0B1D-000D-43E4-ACB0-41DB7332C69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B15A0B1D-000D-43E4-ACB0-41DB7332C69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B15A0B1D-000D-43E4-ACB0-41DB7332C69B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9BFAAC7-2C2E-45BD-AD69-7F3AB7E0E541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9BFAAC7-2C2E-45BD-AD69-7F3AB7E0E541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9BFAAC7-2C2E-45BD-AD69-7F3AB7E0E541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9BFAAC7-2C2E-45BD-AD69-7F3AB7E0E541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
