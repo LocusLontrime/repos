@@ -1,6 +1,6 @@
-﻿public class Sem1Task3 {
+﻿public class Sem1Task3 { // Выяснить является ли число чётным
 
-    static void Main(string[] args) // Выяснить является ли число чётным
+    static void Main(string[] args) 
     {
         Console.WriteLine("Enter a number");
         int number = int.Parse(Console.ReadLine());

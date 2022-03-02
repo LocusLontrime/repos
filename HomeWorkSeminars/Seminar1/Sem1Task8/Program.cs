@@ -1,6 +1,7 @@
-﻿public class Sem1Task8 {
+﻿public class Sem1Task8 // Выяснить, кратно ли число заданному, если нет, вывести остаток.
+{ 
 
-    public static void Main(string[] args) // Выяснить, кратно ли число заданному, если нет, вывести остаток.
+    public static void Main(string[] args) 
     {
         Console.WriteLine("Enter a base number");
         int baseNumber = int.Parse(Console.ReadLine());

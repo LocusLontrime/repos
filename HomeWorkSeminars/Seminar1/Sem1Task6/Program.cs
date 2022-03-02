@@ -1,6 +1,6 @@
-﻿public class Sem1Task6 {
+﻿public class Sem1Task6 { // Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 
-    public static void Main(string[] args) // Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+    public static void Main(string[] args) 
     {
         Console.WriteLine("Enter a number that is greater than or equal to 10 and less than 100");
         int number = int.Parse(Console.ReadLine());

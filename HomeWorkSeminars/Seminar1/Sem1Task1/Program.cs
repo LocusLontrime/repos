@@ -1,6 +1,6 @@
-﻿namespace Sem1Task1;
+﻿namespace Sem1Task1; // Вывести квадрат числа
 
-public class Sem1Task1 { // Вывести квадрат числа
+public class Sem1Task1 { 
 
     static void Main(string[] args)
     {

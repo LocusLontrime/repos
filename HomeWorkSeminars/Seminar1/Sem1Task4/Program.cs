@@ -1,6 +1,6 @@
-﻿public class Sem1Task4 {
+﻿public class Sem1Task4 { // Показать последнюю цифру трёхзначного числа
 
-    public static void Main(string[] args) // Показать последнюю цифру трёхзначного числа
+    public static void Main(string[] args) 
     {
         Console.WriteLine("Enter a three-digit number");
         int number = int.Parse(Console.ReadLine());

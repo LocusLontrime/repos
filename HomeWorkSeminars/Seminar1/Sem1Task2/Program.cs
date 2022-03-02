@@ -1,8 +1,8 @@
-﻿namespace Sem1Task2
+﻿namespace Sem1Task2 // найти максимум из трёх чисел
 {
     public class Sem1Task2
     {
-        public static void Main(string[] args) // найти максимум из трёх чисел
+        public static void Main(string[] args) 
         {
             Console.WriteLine("Enter three numbers, each of them on a new line");
             int num1 = int.Parse(Console.ReadLine());

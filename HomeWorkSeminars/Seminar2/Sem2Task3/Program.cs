@@ -1,6 +1,6 @@
 ﻿public class Sem2Task3 // Программа проверяет пятизначное число на палиндромом
 {
-    public static void Main(string[] args) // a long way
+    public static void Main(string[] args) // a long way for newbies
     {
 
         Console.WriteLine("Enter a 5-digit number: ");

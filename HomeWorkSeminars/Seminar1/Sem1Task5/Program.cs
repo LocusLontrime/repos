@@ -1,6 +1,7 @@
-﻿public class Sem1Task5 {
+﻿public class Sem1Task5 // Показать вторую цифру трёхзначного числа
+{ 
 
-    static void Main(string[] args) // Показать вторую цифру трёхзначного числа
+    static void Main(string[] args) 
     {
         Console.WriteLine("Enter a three-digit number");
         int number = int.Parse(Console.ReadLine());
