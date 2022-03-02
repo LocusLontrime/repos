@@ -17,21 +17,20 @@
             {
                 int currentDigit = number % 10;
                 number /= 10;
-                if (currentDigit >= maxDigit)
+                if (currentDigit >= maxDigit) // finds the min digit's index
                 {
                     maxDigit = currentDigit;
                     maxIndex = i;
                 }
-                if (currentDigit <= minDigit)
+                if (currentDigit <= minDigit) // finds the max digit's index
                 {
                     minDigit = currentDigit;
-                    minIndex = i++;
+                    minIndex = i++; // increment
                 }
             }
+            // Console.WriteLine("MinIndex = " + minIndex + " MaxIndex = " + maxIndex); // -> index checking
 
-            Console.WriteLine("MinIndex = " + minIndex + " MaxIndex = " + maxIndex);
-
-            Console.WriteLine((maxIndex < minIndex ? "min digit" : "max digit") + " located to the left");
+            Console.WriteLine((maxIndex < minIndex ? "min digit " + minDigit : "max digit " + maxDigit) + " located to the left");
         }
     }
 }

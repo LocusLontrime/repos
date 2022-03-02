@@ -6,15 +6,15 @@
     static void Main(string[] args)
     {
         int initialValue = 1000; 
-        decimal interestRate = 1.5m;
+        double interestRate = 1.5d;
         Console.WriteLine("Enter a number of months");
         int monthsNumber = int.Parse(Console.ReadLine()); // wee just need to multiply the initial value by
                                                           // the coefficient raised to the power of n (monthsNumber)
         Console.WriteLine("The final value of deposit equals: " + initialValue * riseToPowerFast(interestRate, monthsNumber));
-        Console.WriteLine("The algo did: " + recursiveCounter + " steps");
+        Console.WriteLine("The algo did: " + recursiveCounter + " steps"); // to see, how O(log(n)) runtime is effective
     }
 
-    public static decimal riseToPowerFast(decimal baseNumber, int power) // fast power-rising
+    public static double riseToPowerFast(double baseNumber, int power) // fast power-rising
     {
         recursiveCounter++;
 
