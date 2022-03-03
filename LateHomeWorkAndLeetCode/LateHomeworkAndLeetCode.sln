@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverse_Integer_7", "..\Rev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paint_House_III_1473", "..\1473\Paint_House_III_1473.csproj", "{99AF766C-2ABE-4055-B600-94E70F8CFA93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cherry_Pickup_II_1463", "..\Cherry_Pickup_II_1463\Cherry_Pickup_II_1463.csproj", "{4277CC77-C284-4B21-B241-4FC2262E2262}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{99AF766C-2ABE-4055-B600-94E70F8CFA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99AF766C-2ABE-4055-B600-94E70F8CFA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99AF766C-2ABE-4055-B600-94E70F8CFA93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4277CC77-C284-4B21-B241-4FC2262E2262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4277CC77-C284-4B21-B241-4FC2262E2262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4277CC77-C284-4B21-B241-4FC2262E2262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4277CC77-C284-4B21-B241-4FC2262E2262}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
