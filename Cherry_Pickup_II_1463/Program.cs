@@ -1,4 +1,4 @@
-﻿public class CherryPickupII1463 // accepted (speed: 108ms, fast, beats 86,11% of C# submissions)
+﻿public class CherryPickupII1463 // accepted (speed: 104ms, fast, beats 90,97% of C# submissions)
 {
 
     public static int[,,] memoTable; // memoTable for dynamic programming
