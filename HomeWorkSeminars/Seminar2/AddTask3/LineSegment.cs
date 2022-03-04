@@ -40,7 +40,14 @@ internal class LineSegment
         Console.WriteLine("Point of intercection coordinates: (" +
             pointOfIntersection.Key + "," + pointOfIntersection.Value + ")");
 
-        return segment1.containsPoint(pointOfIntersection) && segment2.containsPoint(pointOfIntersection);
+        bool flag = segment1.containsPoint(pointOfIntersection) && segment2.containsPoint(pointOfIntersection);
+
+        if (flag)
+        {
+            AddTask3.Quarter(pointOfIntersection);
+            return true;
+        }
+        else  return false;       
     }
 }
 

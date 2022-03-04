@@ -5,11 +5,11 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factorization", "Factorization.csproj", "{3A0A157B-F1B4-46EE-AA27-2C3F19992ABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTask1", "..\AddTask1\AddTask1.csproj", "{37A0B507-A822-4005-8665-3541536A8BD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask1", "..\AddTask1\AddTask1.csproj", "{37A0B507-A822-4005-8665-3541536A8BD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTask2", "..\AddTask2\AddTask2.csproj", "{56C0AD3B-679C-458F-898D-5FCDD210938B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask2", "..\AddTask2\AddTask2.csproj", "{56C0AD3B-679C-458F-898D-5FCDD210938B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTask3", "..\AddTask3\AddTask3.csproj", "{F5E4A72F-9E55-45E0-B023-58B59C4FC323}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask3", "..\AddTask3\AddTask3.csproj", "{F5E4A72F-9E55-45E0-B023-58B59C4FC323}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
