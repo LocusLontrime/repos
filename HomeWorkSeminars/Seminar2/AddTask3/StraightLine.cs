@@ -21,7 +21,7 @@ internal class StraightLine
     {
         if (isParallel(line1, line1)) 
         {
-            Console.WriteLine("Staights lines are paralle");
+            Console.WriteLine("Staights lines are parallel");
             return new KeyValuePair<double, double>(0, 0);
         }
 
