@@ -14,33 +14,37 @@ internal class LineSegment
     }
 
     public LineSegment(KeyValuePair<double, double> startPoint, KeyValuePair<double, double> endPoint) 
-    { 
+    {
+        if (startPoint.Key == endPoint.Key && startPoint.Value == endPoint.Value) {
+            throw new ArgumentException("The coordinates of points cannot match ");
+        }
+
         this.startPoint = startPoint;
         this.endPoint = endPoint;
+
+        Console.WriteLine("A line segment with StartPoint: (" + startPoint.Key + "," + startPoint.Value +
+            ") and EndPoint: (" + endPoint.Key + "," + endPoint.Value + ") has been created");
     }
 
-    public bool containsPoint(KeyValuePair<double, double> point) => new StraightLine(this).containsPoint(point) && 
+    public bool ContainsPoint(KeyValuePair<double, double> point) => new StraightLine(this).ContainsPoint(point) && 
         Math.Min(startPoint.Key, endPoint.Key) <= point.Key && point.Key <= Math.Max(startPoint.Key, endPoint.Key);
-    public static bool containcPointOfIntersection(LineSegment segment1, LineSegment segment2) 
+    public static bool ContainsPointOfIntersection(LineSegment segment1, LineSegment segment2) 
     {
         StraightLine ABline = new StraightLine(segment1);
         StraightLine CDline = new StraightLine(segment2);
 
-        Console.WriteLine("AB straight line equasion: " + ABline.angleCoefficient + "*x " + (ABline.shift > 0 ? "+ " : "- ") + Math.Abs(ABline.shift));
-        Console.WriteLine("CD straight line equasion: " + CDline.angleCoefficient + "*x " + (ABline.shift > 0 ? "+ " : "- ") + Math.Abs(CDline.shift));
-
-        if (StraightLine.isParallel(ABline, CDline))
+        if (StraightLine.IsParallel(ABline, CDline))
         {
-            Console.WriteLine("As the line AB is Parallel to the line CD -> the point of intercection does not exist in the context of the task given");
+            Console.WriteLine("As the line AB is Parallel to the line CD -> the point of intersection does not exist in the context of the task given");
             return false; 
         }
       
-        KeyValuePair<double, double> pointOfIntersection = StraightLine.PointOfIntercection(ABline, CDline);
+        KeyValuePair<double, double> pointOfIntersection = StraightLine.PointOfIntersection(ABline, CDline);
 
-        Console.WriteLine("Point of intercection coordinates: (" +
+        Console.WriteLine("Point of intersection coordinates: (" +
             pointOfIntersection.Key + "," + pointOfIntersection.Value + ")");
 
-        bool flag = segment1.containsPoint(pointOfIntersection) && segment2.containsPoint(pointOfIntersection);
+        bool flag = segment1.ContainsPoint(pointOfIntersection) && segment2.ContainsPoint(pointOfIntersection);
 
         if (flag)
         {
