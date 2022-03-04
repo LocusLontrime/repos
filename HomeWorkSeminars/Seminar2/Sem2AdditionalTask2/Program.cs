@@ -4,8 +4,8 @@
     {
         int year = int.Parse(Console.ReadLine());
         int month = int.Parse(Console.ReadLine());
-        int day = int.Parse(Console.ReadLine());       
-        
+        int day = int.Parse(Console.ReadLine());
+
         Console.WriteLine((2022 - year) - (month < 2 || month == 2 && day == 1 ? 0 : 1));
     }
 }
