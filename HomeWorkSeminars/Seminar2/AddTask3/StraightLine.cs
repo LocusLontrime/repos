@@ -12,7 +12,7 @@ internal class StraightLine
     public StraightLine()
     {
     }
-    public StraightLine(LineSegment segment)
+    public StraightLine(LineSegment segment, bool isPrint)
     {
         if (segment.startPoint.Key == segment.endPoint.Key) // straight line that is parallel to Ordinate axis
         {
@@ -31,12 +31,20 @@ internal class StraightLine
         }
 
         this.yCoefficient = 1;
-        this.xCoefficient = (segment.startPoint.Value - segment.endPoint.Value) / (segment.startPoint.Key - segment.endPoint.Key);
+        this.xCoefficient = - (segment.startPoint.Value - segment.endPoint.Value) / (segment.startPoint.Key - segment.endPoint.Key);
         this.shift = (segment.startPoint.Value * segment.endPoint.Key - segment.endPoint.Value * segment.startPoint.Key) /
             (segment.endPoint.Key - segment.startPoint.Key);
 
-        Console.WriteLine("Straight line with the equation: " + this.xCoefficient + "*x " + (this.shift > 0 ? "+ " : "- ") + Math.Abs(this.yCoefficient) +
-            " = " + this.shift + " has been created");
+        if (xCoefficient < 0 && yCoefficient < 0 && shift < 0) 
+        {
+            Console.WriteLine("lala");
+            xCoefficient = -xCoefficient;
+            yCoefficient = -yCoefficient;
+            shift = -shift;
+        }
+
+        if (isPrint) Console.WriteLine("Straight line with the equation: " + this.xCoefficient + "*x " + (this.yCoefficient > 0 ? "+ " : "- ") + Math.Abs(this.yCoefficient) +
+            "*y = " + this.shift + " has been created");
     }
     public static KeyValuePair<double, double> PointOfIntersection(StraightLine line1, StraightLine line2)
     {

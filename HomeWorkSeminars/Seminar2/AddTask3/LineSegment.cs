@@ -26,12 +26,12 @@ internal class LineSegment
             ") and EndPoint: (" + endPoint.Key + "," + endPoint.Value + ") has been created");
     }
 
-    public bool ContainsPoint(KeyValuePair<double, double> point) => new StraightLine(this).ContainsPoint(point) && 
+    public bool ContainsPoint(KeyValuePair<double, double> point) => new StraightLine(this, false).ContainsPoint(point) && 
         Math.Min(startPoint.Key, endPoint.Key) <= point.Key && point.Key <= Math.Max(startPoint.Key, endPoint.Key);
     public static bool ContainsPointOfIntersection(LineSegment segment1, LineSegment segment2) 
     {
-        StraightLine ABline = new StraightLine(segment1);
-        StraightLine CDline = new StraightLine(segment2);
+        StraightLine ABline = new StraightLine(segment1, true);
+        StraightLine CDline = new StraightLine(segment2, true);
 
         if (StraightLine.IsParallel(ABline, CDline))
         {
