@@ -25,7 +25,7 @@ internal class StraightLine
             xCoefficient = 0;
             yCoefficient = 1;
             shift = segment.startPoint.Value;           
-        } else
+        } else // default case
         {
             this.yCoefficient = 1;
             this.xCoefficient = -(segment.startPoint.Value - segment.endPoint.Value) / (segment.startPoint.Key - segment.endPoint.Key);

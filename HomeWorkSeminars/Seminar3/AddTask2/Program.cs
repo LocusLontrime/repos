@@ -50,13 +50,19 @@
     {
         List <KeyValuePair<int, int>> newList = new List<KeyValuePair<int, int>>();
 
-        double minDistance = 0;
+        if (list.Count == 0) return 0;
+
+        double minDistance = 1000000001d;
 
         foreach (KeyValuePair<int, int> kvp in list) 
         {
             newList.Remove(kvp);
 
-            minDistance = Math.Min(minDistance, Distance(prevPair, kvp) + RecursiveSeeker(newList, kvp));
+            double currentValue = Distance(prevPair, kvp) + RecursiveSeeker(newList, kvp);
+
+            // Console.WriteLine("Currect Value = " + currentValue);
+
+            minDistance = Math.Min(minDistance, currentValue);
 
             newList = new List<KeyValuePair<int, int>>(list);
         }
