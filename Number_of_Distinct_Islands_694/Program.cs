@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-public class NumberOfDistinctIslands694 // accepted (speed: 92ms incredibly fast, beats 100% of C# submissions) 
+public class NumberOfDistinctIslands694 // accepted (speed: 92ms, incredibly fast, beats 100% of C# submissions) 
 {
     public static StringBuilder islandHash;
 

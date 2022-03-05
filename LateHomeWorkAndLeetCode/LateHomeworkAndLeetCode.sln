@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paint_House_III_1473", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cherry_Pickup_II_1463", "..\Cherry_Pickup_II_1463\Cherry_Pickup_II_1463.csproj", "{4277CC77-C284-4B21-B241-4FC2262E2262}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Number_of_Distinct_Islands_694", "..\Number_of_Distinct_Islands_694\Number_of_Distinct_Islands_694.csproj", "{4D08FD30-5CF8-4379-A72B-5683BD6BB6F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Number_of_Distinct_Islands_694", "..\Number_of_Distinct_Islands_694\Number_of_Distinct_Islands_694.csproj", "{4D08FD30-5CF8-4379-A72B-5683BD6BB6F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max_Area_of_Island_695", "..\Max_Area_of_Island_695\Max_Area_of_Island_695.csproj", "{D81C2699-E667-453C-9121-67F337D63A5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{4D08FD30-5CF8-4379-A72B-5683BD6BB6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D08FD30-5CF8-4379-A72B-5683BD6BB6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D08FD30-5CF8-4379-A72B-5683BD6BB6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D81C2699-E667-453C-9121-67F337D63A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81C2699-E667-453C-9121-67F337D63A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81C2699-E667-453C-9121-67F337D63A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81C2699-E667-453C-9121-67F337D63A5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

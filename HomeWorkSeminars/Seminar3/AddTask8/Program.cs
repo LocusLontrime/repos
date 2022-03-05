@@ -2,7 +2,6 @@
                       //Удалить из массива все элементы, содержащие число 3.
                       //Вывести в консоль новый массив и количество удалённых элементов
 {
-
     public static void Main(string[] args)
     {      
         int[] array = new int[] { 1, 11, 23, 33, 98, 66, 63, 36, 96, 100, 100, 1, 98, 93, 33, 97, 96};
@@ -17,9 +16,7 @@
     public static List<int> DeleteAllNumbersContaining3(int[] array) // returns a list based on initial array without elements containing digit "3"
     {
         List<int> list = new List<int>();
-
-        foreach (int i in array) if (!Contains3(i)) list.Add(i);
-       
+        foreach (int i in array) if (!Contains3(i)) list.Add(i);     
         return list;
     }
 
@@ -27,7 +24,7 @@
     {       
         int digit;
 
-        while (num > 0) 
+        while (num > 0) // cycling all over the digits
         { 
             digit = num % 10;
             if (digit == 3) return true;
