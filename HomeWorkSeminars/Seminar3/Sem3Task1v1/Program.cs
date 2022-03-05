@@ -1,4 +1,4 @@
-﻿public class Sem2Task3 // Программа проверяет пятизначное число на палиндромом
+﻿public class Sem3HomeTask1v1 // Программа проверяет пятизначное число на палиндромом
 {
     public static void Main(string[] args) // a long way for newbies
     {

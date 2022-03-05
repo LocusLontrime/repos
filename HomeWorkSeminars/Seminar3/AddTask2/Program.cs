@@ -1,4 +1,4 @@
-﻿public class AddTask2 // Решить задачу 1 для n точек
+﻿public class AddTask3 // Решить задачу 1 для n точек
 {
     static void Main(string[] args)
     {

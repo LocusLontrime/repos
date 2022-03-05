@@ -1,4 +1,4 @@
-﻿public class AddTask3 // Даны 4 точки a, b, c, d. Пересекаются ли вектора AB и CD?
+﻿public class AddTask2and4 // Даны 4 точки a, b, c, d. Пересекаются ли вектора AB и CD?
 {
     static void Main(string[] args)
     {

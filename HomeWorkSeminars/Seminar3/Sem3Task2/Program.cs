@@ -1,4 +1,4 @@
-﻿public class Sem2HomeTask6 // Найти расстояние между точками в пространстве 2D/3D
+﻿public class Sem3HomeTask2 // Найти расстояние между точками в пространстве 2D/3D, обобщена на эн-мерный случай
 {
     public static void Main(string[] args)
     {
@@ -20,7 +20,7 @@
                 result += deltaCoordinate * deltaCoordinate;
             }
 
-            Console.WriteLine("Distance between two points = " + Math.Sqrt(result));
+            Console.WriteLine("Distance between two points in = " + numberOfDims + "-D space = " + Math.Sqrt(result));
         }
     }
 }

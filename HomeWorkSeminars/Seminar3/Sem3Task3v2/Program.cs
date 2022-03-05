@@ -1,4 +1,4 @@
-﻿public class Sem2Task3version2 // Программа проверяет пятизначное число на палиндромом
+﻿public class Sem3HomeTask1v2 // Программа проверяет пятизначное число на палиндромом
 {
     public static void Main(string[] args) // a fast way, works for every positive Integer
     {
