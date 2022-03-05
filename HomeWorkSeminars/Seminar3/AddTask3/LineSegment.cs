@@ -53,7 +53,7 @@ internal class LineSegment
                                                                                                                 // it's located in
         if (flag)
         {
-            AddTask3.Quarter(pointOfIntersection);
+            AddTask2and4.Quarter(pointOfIntersection);
             return true;
         }
         else  return false;       

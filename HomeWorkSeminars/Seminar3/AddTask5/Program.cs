@@ -1,28 +1,30 @@
-﻿public class AddTask5 
-{
+﻿public class AddTask5 // Дан массив средних температур (массив заполняется случайно) за последние 10 лет.
+                      // На ввод подают номер месяца и год начали и конца. Определить самые высокие и низкие температуры
+                      // для лета, осени, зимы и весны в заданном промежутке. Если таких температур нет, сообщить, что определить не удалось.
 
+{
     public static void Main(string[] args)
     {
         int[,] array = new int[10, 12];
 
-        RandomArray2Dfulfilling(array, 25);
+        RandomArray2Dfulfilling(array, 25); // random array generation
 
-        DefineAverageTemperatures(array, 2, 2, 8, 9);
+        DefineAverageTemperatures(array, 2, 2, 8, 9); // menhod call and some testing
         DefineAverageTemperatures(array, 2, 2, 2, 6);
     }
 
-    public static void RandomArray2Dfulfilling(int[,] array, int range) 
+    public static void RandomArray2Dfulfilling(int[,] array, int range) // method, than fullfil a 2D-array randomly
     {
         Random random = new Random();
 
         for (int i = 0; i < array.GetLength(0); i++)
             for (int j = 0; j < array.GetLength(1); j++)
-                array[i, j] = random.Next(-range, range);      
+                array[i, j] = random.Next(-range, range); // random generation within the range given     
     }
 
-    public static void DefineAverageTemperatures(int[,] array, int startYear, int startMonth, int endYear, int endMonth) 
+    public static void DefineAverageTemperatures(int[,] array, int startYear, int startMonth, int endYear, int endMonth) // main calculating method
     {
-        if (startYear <= 0 || endYear <= 0 || startYear > 10 || endYear > 10)
+        if (startYear <= 0 || endYear <= 0 || startYear > 10 || endYear > 10) // checks the input data
         {
             Console.WriteLine("Start or End year is out of range");
             return;
@@ -89,7 +91,7 @@
             j = 0; // nullify j-counter before the next step of the cycle
         }
 
-        Console.WriteLine("Average temperatures per season: ");
+        Console.WriteLine("Average temperatures per season: "); // printing the results
 
         if (summerCounter > 0) Console.WriteLine("summerCounter average temperature = " + String.Format("{0:f2}", summerAvg / summerCounter));
         if (autumnCounter > 0) Console.WriteLine("autumnCounter average temperature = " + String.Format("{0:f2}", autumnAvg / autumnCounter));

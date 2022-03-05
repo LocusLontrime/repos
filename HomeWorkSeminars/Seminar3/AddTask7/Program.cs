@@ -10,5 +10,7 @@
         Console.WriteLine(MinAngleDegrees(X, Y)); // method call
     }
 
-    public static double MinAngleDegrees(int X, int Y) => (180 * Math.Atan(1.0 * Math.Abs(Y) / Math.Abs(X)) / Math.PI); // finds the min angle with                                                                                                                      // Abscissa axis
+    public static double MinAngleDegrees(int X, int Y) => (180 * Math.Atan(1.0 * Math.Abs(Y) / Math.Abs(X)) / Math.PI); // finds the min angle with 
+                                                                                                                        // Abscissa axis, converts Radians
+                                                                                                                        // to Degrees
 }

@@ -7,12 +7,12 @@ public class AddTask6 // На вход подаётся число n > 4, ука
     {
         Console.WriteLine("Enter a password length");
         int length = int.Parse(Console.ReadLine());
-        Console.WriteLine("Password: " + GeneratePassword(length));
+        Console.WriteLine("Password: " + GeneratePassword(length)); // method call
     }
 
-    public static string GeneratePassword(int length) 
+    public static string GeneratePassword(int length) // method that generates a password according to the task's condition
     {
-
+        // dictionary of all symbols
         string[] array = new string[]  { "АБВГДЕЖЗИКЛМНОПРСТУФХЧШЭЮЯ", "абвгдежзиклмнопрстуфхчшэюя", "0123456789", "!\"#$%&\\'()*+,-./:;<=>?@[\\\\]^_`{|}~" };
 
         int nmbrs = length / 4; // here we define the number of max elements available for every group
