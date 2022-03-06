@@ -1,4 +1,4 @@
-﻿public class NumberOfDistinctIslands694 // accepted (speed: 92ms incredibly fast, beats 100% of C# submissions) 
+﻿public class MaxAreaofIsland694 // accepted (speed: 88ms, incredibly fast, beats 97,61% of C# submissions) 
 {
     public static int volumeCounter;
 
@@ -31,13 +31,13 @@
                 if (!visitedCells[j, i] && grid[j, i] == 1)
                 {
                     volumeCounter = 0;
-                    FindIslandVolume(grid, j, i); // all the islands begins with the letter 'T"
+                    FindIslandVolume(grid, j, i); // calculating the volume of all the islands 
                     Console.WriteLine("The volume of the island being processed: " + volumeCounter);
-                    maxVolume = Math.Max(maxVolume, volumeCounter);
+                    maxVolume = Math.Max(maxVolume, volumeCounter); // write the max value in maxVolume
                 }
             }
 
-        return maxVolume; // return the Set size (set can store only different elements (strings in our case) = distinct islands)
+        return maxVolume; // return the max volume
     }
 
     public static void FindIslandVolume(int[,] grid, int j, int i)
