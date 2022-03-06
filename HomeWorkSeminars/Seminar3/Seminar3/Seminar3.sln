@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seminar3", "Seminar3.csproj", "{724DC50D-69F7-4FEC-99C0-06560876491A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask1", "..\AddTask1\AddTask1.csproj", "{507CAFDD-F45F-44D0-9AE0-985401DDB45B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask3", "..\AddTask2\AddTask3.csproj", "{4FF0B405-EA7B-4D8D-B6D7-9D783A49F284}"
@@ -33,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{724DC50D-69F7-4FEC-99C0-06560876491A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{724DC50D-69F7-4FEC-99C0-06560876491A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{724DC50D-69F7-4FEC-99C0-06560876491A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{724DC50D-69F7-4FEC-99C0-06560876491A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{507CAFDD-F45F-44D0-9AE0-985401DDB45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{507CAFDD-F45F-44D0-9AE0-985401DDB45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{507CAFDD-F45F-44D0-9AE0-985401DDB45B}.Release|Any CPU.ActiveCfg = Release|Any CPU

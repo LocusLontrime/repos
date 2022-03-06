@@ -29,6 +29,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plus_One_66", "PlusOne66\Pl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reverse_Integer_7", "Reverse_Integer_7\Reverse_Integer_7.csproj", "{F8DC080C-C923-475C-AAB1-0B063DD6F91C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Number_of_Distinct_Islands_II_711", "711\Number_of_Distinct_Islands_II_711.csproj", "{A4EC9653-0C94-4539-ABCC-C5B214B21A0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Maze_490", "The_Maze_490\The_Maze_490.csproj", "{A605211F-3871-4489-A278-065AF4930D27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{F8DC080C-C923-475C-AAB1-0B063DD6F91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8DC080C-C923-475C-AAB1-0B063DD6F91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8DC080C-C923-475C-AAB1-0B063DD6F91C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4EC9653-0C94-4539-ABCC-C5B214B21A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EC9653-0C94-4539-ABCC-C5B214B21A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EC9653-0C94-4539-ABCC-C5B214B21A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EC9653-0C94-4539-ABCC-C5B214B21A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A605211F-3871-4489-A278-065AF4930D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A605211F-3871-4489-A278-065AF4930D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A605211F-3871-4489-A278-065AF4930D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A605211F-3871-4489-A278-065AF4930D27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

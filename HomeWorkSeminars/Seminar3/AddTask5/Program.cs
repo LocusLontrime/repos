@@ -9,8 +9,8 @@
 
         RandomArray2Dfulfilling(array, 25); // random array generation
 
-        DefineAverageTemperatures(array, 2, 2, 8, 9); // menhod call and some testing
-        DefineAverageTemperatures(array, 2, 2, 2, 6);
+        DefineMinAndMaxTemperatures(array, 2, 2, 8, 9); // menhod call and some testing
+        DefineMinAndMaxTemperatures(array, 2, 2, 2, 6);
     }
 
     public static void RandomArray2Dfulfilling(int[,] array, int range) // method, than fullfil a 2D-array randomly
@@ -22,7 +22,7 @@
                 array[i, j] = random.Next(-range, range); // random generation within the range given     
     }
 
-    public static void DefineAverageTemperatures(int[,] array, int startYear, int startMonth, int endYear, int endMonth) // main calculating method
+    public static void DefineMinAndMaxTemperatures(int[,] array, int startYear, int startMonth, int endYear, int endMonth) // main calculating method
     {
         if (startYear <= 0 || endYear <= 0 || startYear > 10 || endYear > 10) // checks the input data
         {
@@ -44,48 +44,57 @@
 
         int j = startMonth - 1;
 
-        double summerAvg = 0; // can be easily simplified to an array form
-        double autumnAvg = 0;
-        double winterAvg = 0;
-        double springAvg = 0;
+        double summerMax = 0; // can be easily simplified to an array form
+        double autumnMax = 0;
+        double winterMax = 0;
+        double springMax = 0;
 
-        double summerCounter = 0; // can be easily simplified to an array form
-        double autumnCounter = 0;
-        double winterCounter = 0;
-        double springCounter = 0;
+        double summerMin = 0; // can be easily simplified to an array form
+        double autumnMin = 0;
+        double winterMin = 0;
+        double springMin = 0;
+
+        int summerCounter = 0; // can be easily simplified to an array form
+        int autumnCounter = 0;
+        int winterCounter = 0;
+        int springCounter = 0;
 
         for (int i = startYear - 1; i < endYear; i++) // cycling all over the interval
         {
             while (j >= 0 && j <= 1) // winter (january and february)
             {
                 if (i == endYear - 1 && j == endMonth - 1) break;
-                winterAvg += array[i, j++];
+                winterMax = Math.Max(winterMax, array[i, j]); 
+                winterMin = Math.Min(winterMin, array[i, j++]);
                 winterCounter++;
             }
 
             while (j >= 2 && j <= 4) // spring
             {
                 if (i == endYear - 1 && j == endMonth - 1) break;
-                springAvg += array[i, j++];
+                springMax = Math.Max(springMax, array[i, j]);  
+                springMin = Math.Min(springMin, array[i, j++]);
                 springCounter++;
             }
 
             while (j >= 4 && j <= 7) // summer
             {
                 if (i == endYear - 1 && j == endMonth - 1) break;
-                summerAvg += array[i, j++];
+                summerMax = Math.Max(summerMax, array[i, j]);
+                summerMin = Math.Min(summerMin, array[i, j++]);
                 summerCounter++;
             }
 
             while (j >= 8 && j <= 10) // autumn
             {
                 if (i == endYear - 1 && j == endMonth - 1) break;
-                autumnAvg += array[i, j++];
+                autumnMax = Math.Max(autumnMax, array[i, j]);
+                autumnMin = Math.Min(autumnMin, array[i, j++]);
                 autumnCounter++;
             }
 
             if (i == endYear - 1 && j == endMonth - 1) break; // winter (december)
-            winterAvg += array[i, j++];
+            winterMax = Math.Max(winterMax, array[i, j++]);
             winterCounter++;
 
             j = 0; // nullify j-counter before the next step of the cycle
@@ -93,9 +102,9 @@
 
         Console.WriteLine("Average temperatures per season: "); // printing the results
 
-        if (summerCounter > 0) Console.WriteLine("summerCounter average temperature = " + String.Format("{0:f2}", summerAvg / summerCounter));
-        if (autumnCounter > 0) Console.WriteLine("autumnCounter average temperature = " + String.Format("{0:f2}", autumnAvg / autumnCounter));
-        if (winterCounter > 0) Console.WriteLine("winterCounter average temperature = " + String.Format("{0:f2}", winterAvg / winterCounter));
-        if (springCounter > 0) Console.WriteLine("springCounter average temperature = " + String.Format("{0:f2}", springAvg / springCounter));
+        if (summerCounter > 0) Console.WriteLine("summer Max temperature = " + summerMax + " Min = " + summerMin + " counted " + summerCounter + " times");
+        if (autumnCounter > 0) Console.WriteLine("autumn Max temperature = " + autumnMax + " Min = " + autumnMin + " counted " + autumnCounter + " times");
+        if (winterCounter > 0) Console.WriteLine("winter Max temperature = " + winterMax + " Min = " + winterMin + " counted " + winterCounter + " times");
+        if (springCounter > 0) Console.WriteLine("spring Max temperature = " + springMax + " Min = " + springMin + " counted " + springCounter + " times");
     }
 }
