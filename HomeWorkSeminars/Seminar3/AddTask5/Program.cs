@@ -11,6 +11,8 @@
 
         DefineMinAndMaxTemperatures(array, 2, 2, 8, 9); // menhod call and some testing
         DefineMinAndMaxTemperatures(array, 2, 2, 2, 6);
+
+        DefineMinAndMaxTemperatures(array, 2, 3, 2, 12);
     }
 
     public static void RandomArray2Dfulfilling(int[,] array, int range) // method, than fullfil a 2D-array randomly
@@ -44,6 +46,8 @@
 
         int j = startMonth - 1;
 
+        bool flag = false;
+
         double summerMax = 0; // can be easily simplified to an array form
         double autumnMax = 0;
         double winterMax = 0;
@@ -63,40 +67,46 @@
         {
             while (j >= 0 && j <= 1) // winter (january and february)
             {
-                if (i == endYear - 1 && j == endMonth - 1) break;
+                if (i == endYear - 1 && j == endMonth - 1) flag = true;
                 winterMax = Math.Max(winterMax, array[i, j]); 
                 winterMin = Math.Min(winterMin, array[i, j++]);
+                if (flag) break;
                 winterCounter++;
             }
 
             while (j >= 2 && j <= 4) // spring
             {
-                if (i == endYear - 1 && j == endMonth - 1) break;
+                if (i == endYear - 1 && j == endMonth - 1) flag = true;
                 springMax = Math.Max(springMax, array[i, j]);  
                 springMin = Math.Min(springMin, array[i, j++]);
+                if (flag) break;
                 springCounter++;
             }
 
-            while (j >= 4 && j <= 7) // summer
+            while (j >= 5 && j <= 7) // summer
             {
-                if (i == endYear - 1 && j == endMonth - 1) break;
+                if (i == endYear - 1 && j == endMonth - 1) flag = true;
                 summerMax = Math.Max(summerMax, array[i, j]);
                 summerMin = Math.Min(summerMin, array[i, j++]);
+                if (flag) break;
                 summerCounter++;
             }
 
             while (j >= 8 && j <= 10) // autumn
             {
-                if (i == endYear - 1 && j == endMonth - 1) break;
+                if (i == endYear - 1 && j == endMonth - 1) flag = true;
                 autumnMax = Math.Max(autumnMax, array[i, j]);
                 autumnMin = Math.Min(autumnMin, array[i, j++]);
+                if (flag) break;
                 autumnCounter++;
             }
 
-            if (i == endYear - 1 && j == endMonth - 1) break; // winter (december)
-            winterMax = Math.Max(winterMax, array[i, j++]);
+            if (i == endYear - 1 && j == endMonth - 1) flag = true; // winter (december)
+            winterMax = Math.Max(winterMax, array[i, j]);
+            winterMin = Math.Min(winterMin, array[i, j++]);
             winterCounter++;
-
+            if (flag) break;
+            
             j = 0; // nullify j-counter before the next step of the cycle
         }
 
