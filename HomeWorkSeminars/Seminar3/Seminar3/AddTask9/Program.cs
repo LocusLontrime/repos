@@ -5,7 +5,7 @@
         PrintMultiplicationTable();
     }
 
-    public static void PrintMultiplicationTable() 
+    public static void PrintMultiplicationTable() // printing method, some formatting
     { 
         Random random = new Random();
 
