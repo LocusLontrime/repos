@@ -1,5 +1,6 @@
 ﻿using System.Threading;
-public class RobotRoomCleaner489 
+public class RobotRoomCleaner489 // accepted (88ms, very fast, beats 95,4% of C# submissions), this implementation slightly differs
+                                 // from the one accepted on LeetCode.com, here we create and define the class Cleaner...
 {
     public static readonly int[,] dirs = new int[,] { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } }; // directions dictionary -> up, right, down and left
     public static HashSet<KeyValuePair<int, int>> visitedCells = new HashSet<KeyValuePair<int, int>>();

@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maximum_Depth_of_Binary_Tre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot_Room_Cleaner_489", "Robot_Room_Cleaner_489\Robot_Room_Cleaner_489.csproj", "{2221ED5F-6BB1-49F1-AB42-FE0EBF88FF6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N-Queens_II_52", "N-Queens_II_52\N-Queens_II_52.csproj", "{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{2221ED5F-6BB1-49F1-AB42-FE0EBF88FF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2221ED5F-6BB1-49F1-AB42-FE0EBF88FF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2221ED5F-6BB1-49F1-AB42-FE0EBF88FF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
