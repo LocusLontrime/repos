@@ -1,11 +1,11 @@
-﻿public class NQueensII52 // accepted (36ms, fast enough, beats 70,54% of C# submissions)
+﻿public class NQueensII52 // accepted (36ms, fast enough, beats 70,54% of C# submissions) then (after submission) we added placements printing!!!
 {
     public static int N;
     public static HashSet<HashSet<KeyValuePair<int, int>>> set = new HashSet<HashSet<KeyValuePair<int, int>>>();
 
     static void Main(string[] args)
     {
-        Console.WriteLine("All placements number: " + TotalNQueens(12) + "\n");
+        Console.WriteLine("All placements number: " + TotalNQueens(5) + "\n");
 
         Console.WriteLine("All placements Queens coordinates:\n");
 
@@ -25,7 +25,8 @@
         return RecursiveSeeker(0, new List<int>(), new HashSet<int>(), new HashSet<int>());
     }
 
-    public static int RecursiveSeeker(int row, List<int> verticalSet, HashSet<int> diag1Set, HashSet<int> diag2Set)
+    public static int RecursiveSeeker(int row, List<int> verticalSet, HashSet<int> diag1Set, HashSet<int> diag2Set) // List -> only for printing
+                                                                                                                    // the placements queens coordinates
     {
         if (row == N) {
             HashSet<KeyValuePair<int, int>> currSet = new HashSet<KeyValuePair<int, int>>();

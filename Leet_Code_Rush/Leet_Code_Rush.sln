@@ -37,13 +37,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "The_Maze_II_505", "The_Maze
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecSeeker", "RecSeeker\RecSeeker.csproj", "{F067CA35-138F-4A76-A66F-D024AF410617}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search_in_a_Binary_Search_Tree_700", "Search_in_a_Binary_Search_Tree_700\Search_in_a_Binary_Search_Tree_700.csproj", "{1D9A6F66-363C-4A25-8295-762CDD6E62E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Search_in_a_Binary_Search_Tree_700", "Search_in_a_Binary_Search_Tree_700\Search_in_a_Binary_Search_Tree_700.csproj", "{1D9A6F66-363C-4A25-8295-762CDD6E62E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maximum_Depth_of_Binary_Tree_104", "Maximum_Depth_of_Binary_Tree_104\Maximum_Depth_of_Binary_Tree_104.csproj", "{A77EB018-F374-413D-A9A1-93DBCB876E30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maximum_Depth_of_Binary_Tree_104", "Maximum_Depth_of_Binary_Tree_104\Maximum_Depth_of_Binary_Tree_104.csproj", "{A77EB018-F374-413D-A9A1-93DBCB876E30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot_Room_Cleaner_489", "Robot_Room_Cleaner_489\Robot_Room_Cleaner_489.csproj", "{2221ED5F-6BB1-49F1-AB42-FE0EBF88FF6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robot_Room_Cleaner_489", "Robot_Room_Cleaner_489\Robot_Room_Cleaner_489.csproj", "{2221ED5F-6BB1-49F1-AB42-FE0EBF88FF6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N-Queens_II_52", "N-Queens_II_52\N-Queens_II_52.csproj", "{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "N-Queens_II_52", "N-Queens_II_52\N-Queens_II_52.csproj", "{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinations_77", "Combinations_77\Combinations_77.csproj", "{C9F5F751-7E37-4E99-8326-829401775D8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F5F751-7E37-4E99-8326-829401775D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F5F751-7E37-4E99-8326-829401775D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F5F751-7E37-4E99-8326-829401775D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F5F751-7E37-4E99-8326-829401775D8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
