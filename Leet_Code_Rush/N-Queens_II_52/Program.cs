@@ -5,15 +5,15 @@
 
     static void Main(string[] args)
     {
-        Console.WriteLine("All placements number: " + TotalNQueens(5) + "\n");
+        Console.WriteLine("All placements number: " + TotalNQueens(15) + "\n");
 
         Console.WriteLine("All placements Queens coordinates:\n");
 
-        foreach (var set in set) 
+        /*foreach (var set in set) 
         {
             foreach (var kvp in set) Console.Write("(" + kvp.Key + "," + kvp.Value + ") ");
             Console.WriteLine();
-        }
+        }*/
     }
 
     public static int TotalNQueens(int n) 

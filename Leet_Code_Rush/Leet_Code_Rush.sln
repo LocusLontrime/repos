@@ -45,7 +45,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robot_Room_Cleaner_489", "R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "N-Queens_II_52", "N-Queens_II_52\N-Queens_II_52.csproj", "{522DA45D-BD16-4047-BEBE-9BF4CE33D5F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinations_77", "Combinations_77\Combinations_77.csproj", "{C9F5F751-7E37-4E99-8326-829401775D8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Combinations_77", "Combinations_77\Combinations_77.csproj", "{C9F5F751-7E37-4E99-8326-829401775D8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permutation_46", "Permutation_46\Permutation_46.csproj", "{E5E925E8-1139-4F97-B7C8-EF228E8A2DC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permutations_II_47", "Permutations_II_47\Permutations_II_47.csproj", "{78FCE8EC-CB7A-4933-AB57-B48239FACB1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "The_Skyline_Problem_218", "The_Skyline_Problem_218\The_Skyline_Problem_218.csproj", "{AC8D3C9C-4E16-443B-8E20-713BF3B069CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeHelpfulMethods", "SomeHelpfulMethods\SomeHelpfulMethods.csproj", "{E9038E53-154D-405C-A19E-4DE194622E4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +149,22 @@ Global
 		{C9F5F751-7E37-4E99-8326-829401775D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9F5F751-7E37-4E99-8326-829401775D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9F5F751-7E37-4E99-8326-829401775D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5E925E8-1139-4F97-B7C8-EF228E8A2DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5E925E8-1139-4F97-B7C8-EF228E8A2DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5E925E8-1139-4F97-B7C8-EF228E8A2DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5E925E8-1139-4F97-B7C8-EF228E8A2DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78FCE8EC-CB7A-4933-AB57-B48239FACB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FCE8EC-CB7A-4933-AB57-B48239FACB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FCE8EC-CB7A-4933-AB57-B48239FACB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FCE8EC-CB7A-4933-AB57-B48239FACB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8D3C9C-4E16-443B-8E20-713BF3B069CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8D3C9C-4E16-443B-8E20-713BF3B069CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8D3C9C-4E16-443B-8E20-713BF3B069CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8D3C9C-4E16-443B-8E20-713BF3B069CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9038E53-154D-405C-A19E-4DE194622E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9038E53-154D-405C-A19E-4DE194622E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9038E53-154D-405C-A19E-4DE194622E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9038E53-154D-405C-A19E-4DE194622E4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
