@@ -1,12 +1,12 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
-public class TheSkylineProblem218 
+public class TheSkylineProblem218 // accepted (speed: 152 ms, incredibly fast, beats 98,59% of C# submissions)
 {
     public static int[,] buildings;
 
     static void Main(string[] args)
     {
-        List<List<int>> lists = GetSkyline(new int[,] { { 2, 9, 10 },{ 3, 7, 15 },{ 5, 12, 12 },{ 15, 20, 10 },{ 19, 24, 8 } });
+        IList<IList<int>> lists = GetSkyline(new int[,] { { 2, 9, 10 },{ 3, 7, 15 },{ 5, 12, 12 },{ 15, 20, 10 },{ 19, 24, 8 } });
 
         Console.WriteLine("City Skyline: \n");
         foreach (var item in lists) // printing the result
@@ -16,18 +16,18 @@ public class TheSkylineProblem218
         }
     }
 
-    public static List<List<int>> GetSkyline(int[,] buildings)
+    public static IList<IList<int>> GetSkyline(int[,] buildings)
     {
         TheSkylineProblem218.buildings = buildings; 
         return RecursiveSeeker(0, buildings.GetLength(0) - 1); // recursive call
     }
 
-    public static List<List<int>> RecursiveSeeker(int leftPointer, int rightPointer) 
+    public static IList<IList<int>> RecursiveSeeker(int leftPointer, int rightPointer) 
     {      
         // base cases:
         if (leftPointer == rightPointer) // when only one building remained we can add its silhouette as a minimal Skyline
         { 
-            List<List<int>> list = new List<List<int>>();
+            IList<IList<int>> list = new List<IList<int>>();
 
             List<int> point1 = new List<int>();
             List<int> point2 = new List<int>();
@@ -51,9 +51,9 @@ public class TheSkylineProblem218
         return Merge(RecursiveSeeker(leftPointer, pivotIndex), RecursiveSeeker(pivotIndex + 1, rightPointer)); // "conquer" section: 
         // we are merging the parts of city Skyline step by step into the final one
     }
-    public static List<List<int>> Merge(List<List<int>> skyLine1, List<List<int>> skyLine2) 
+    public static IList<IList<int>> Merge(IList<IList<int>> skyLine1, IList<IList<int>> skyLine2) 
     {         
-        List<List<int>> result = new List<List<int>>();              
+        IList<IList<int>> result = new List<IList<int>>();              
 
         int leftMaxIndex = skyLine1.Count, rightMaxIndex = skyLine2.Count;           // now if threre remained some elements in skyLine1 or 
 
@@ -63,7 +63,6 @@ public class TheSkylineProblem218
 
         while (leftPointer < leftMaxIndex && rightPointer < rightMaxIndex)
         {
-
             if (skyLine1[leftPointer][0] < skyLine2[rightPointer][0]) // comparison of x coordinates, we want to pick the smallest one
             {
                 currentX = skyLine1[leftPointer][0];
@@ -119,7 +118,7 @@ public class TheSkylineProblem218
         return result;
     }
 
-    public static void AddPoint(List<List<int>> result, int x, int height) // here we add a point to the result Skyline,
+    public static void AddPoint(IList<IList<int>> result, int x, int height) // here we add a point to the result Skyline,
                                                                            // this code has multiple invocations during merge phase, therefore, 
                                                                            // it will be convenient for us to implement a method
     {
