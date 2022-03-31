@@ -8,6 +8,9 @@ namespace TetrisX
 
         private static readonly int cubeSide = 50;
 
+        private static List<Color> colorList;
+        private static int colorCounter;
+
         // playable area section
         private static int[,] binaryGrid;
         private static PictureBox[,] playableArea;
@@ -21,6 +24,10 @@ namespace TetrisX
         private static List<Point> currentFigure; // -> Figure figure // list of tetroGon coordinates with the center in the rotationPoint
         private static List<PictureBox> currentFigureCells;
         private static Point currentFigureCoords;
+
+        // next Figure section
+        private static List<PictureBox> nextFigure;
+        private static int nextFigureNumber;
 
         private static Label label;
 
@@ -39,7 +46,7 @@ namespace TetrisX
             this.Height = height;
 
             scores = 0;
-            
+
             figures = new List<List<Point>>();
 
             for (int i = 0; i < 7; i++) // 7 figures
@@ -47,10 +54,21 @@ namespace TetrisX
                 figures.Add(new List<Point>());
             }
 
+            //Color Library
+            colorCounter = 0;
+
+            colorList = new List<Color>();
+
+            colorList.Add(Color.DarkRed);
+            colorList.Add(Color.DarkBlue);
+            colorList.Add(Color.Orange);
+            colorList.Add(Color.DarkGreen);
+            colorList.Add(Color.Purple);
+
             //Figures library
             figures[0].Add(new Point(0, 0)); // the first one
             figures[0].Add(new Point(-1, 0));
-            figures[0].Add(new Point(0, - 1));
+            figures[0].Add(new Point(0, -1));
             figures[0].Add(new Point(1, 0));
 
             figures[1].Add(new Point(-1, -1)); // the second one
@@ -84,12 +102,12 @@ namespace TetrisX
             figures[6].Add(new Point(1, 0));
 
             label = new Label();
-            label.Size = new Size(225, 1050);
+            label.Size = new Size(225, 100);
             label.Location = new Point(751, 0);
 
-            label.Font = new Font(FontFamily.GenericMonospace, 15, FontStyle.Bold);           
+            label.Font = new Font(FontFamily.GenericMonospace, 15, FontStyle.Bold);
 
-            label.Text = "\n     Scores: 0";
+            label.Text = "\n     Scores: 0" + "\n\n     Next figure: ";
 
             form.Add(label);
 
@@ -107,15 +125,18 @@ namespace TetrisX
             timer.Interval = speed;
             timer.Start();
 
+            nextFigure = new List<PictureBox>();
+
             GenerateGrid(); // here we add a markUp
 
-            // GridZeroFill(); // filling grid with nulls
-            GridTestFill();
+            GridZeroFill(); // filling grid with nulls
+            // GridTestFill(); -> test MODE
 
+            DefineNextFigureNum();
             GenerateNewFigure(); // creates a first figure on the field
         }
 
-        private static void KeyPressedHandler(Object sender, KeyEventArgs args) 
+        private static void KeyPressedHandler(Object sender, KeyEventArgs args)
         {
             switch (args.KeyCode.ToString()) // snake cannot move in the opposite direction it did before
             {
@@ -128,12 +149,12 @@ namespace TetrisX
                 case "Left": // left figure shift
                     if (IsMovementValid("Left"))
                     {
-                       LeftMove();
+                        LeftMove();
                     }
-                    break;                               
+                    break;
                 case "Down":
                     DownShifting();
-                    break; 
+                    break;
                 case "Space": // rotation
                     Rotate(true); // left
                     break;
@@ -154,7 +175,7 @@ namespace TetrisX
                 {
                     binaryGrid[j, i] = 0;
                 }
-            }            
+            }
         }
 
         private static void GridTestFill() // Zero fulfilling of the binary Grid
@@ -164,8 +185,8 @@ namespace TetrisX
                 for (int i = 0; i < xMax; i++)
                 {
                     if (j <= 6) binaryGrid[j, i] = 0;
-                    else 
-                    { 
+                    else
+                    {
                         binaryGrid[j, i] = 1;
                         DrawPB(new Point(i, j));
                     }
@@ -173,8 +194,8 @@ namespace TetrisX
             }
         }
 
-        private static void DrawPB(Point location) 
-        { 
+        private static void DrawPB(Point location)
+        {
             PictureBox pb = new PictureBox();
 
             pb.Size = new Size(cubeSide, cubeSide);
@@ -190,10 +211,10 @@ namespace TetrisX
         {
             for (int i = 0; i <= height / cubeSide; i++) // horizontal ones
             {
-                DrawLine(form, new Point(0, cubeSide * i), new Size(width - label.Width, 1));
+                DrawLine(form, new Point(0, cubeSide * i), new Size(width - label.Width - 25, 1));
             }
 
-            for (int i = 0; i <= (width - label.Width) / cubeSide + 1; i++) // vertical ones
+            for (int i = 0; i <= (width - label.Width) / cubeSide; i++) // vertical ones
             {
                 DrawLine(form, new Point(cubeSide * i, 0), new Size(1, height));
             }
@@ -208,6 +229,33 @@ namespace TetrisX
             form.Add(pictureBox);
         }
 
+        private static void DrawNextFigurePreview() // when the figure hits 1 on the grid the preview starts
+                                                    // to change on pressing down button
+        {
+            int xStart = 850;
+            int yStart = 150;
+
+            if (nextFigure.Count > 0) for (int i = 0; i < nextFigure.Count; i++) // removing the old cells
+            {
+                nextFigure[i].Dispose();
+            }
+
+            nextFigure = new List<PictureBox>();
+
+            for (int i = 0; i < 4; i++) // painting the new ones
+            {
+                PictureBox pb = new PictureBox();
+                pb.Size = new Size(cubeSide, cubeSide);
+                pb.BackColor = colorList[colorCounter % colorList.Count];
+                pb.Location = new Point(xStart + figures[nextFigureNumber][i].X * cubeSide, 
+                    yStart + figures[nextFigureNumber][i].Y * cubeSide);
+
+                nextFigure.Add(pb);
+
+                form.Add(pb);
+            }
+        }
+
         private static void FullRowsRemoving() // The method based on Levigin's algo
         {
             bool result = false; // if there is a row full of 1s
@@ -219,9 +267,9 @@ namespace TetrisX
                 for (int l = 0; l < xMax - 1; l++)
                 {
                     result = binaryGrid[i, l] == 1 ? true : false;
-                    if (!result) 
+                    if (!result)
                     {
-                        break; 
+                        break;
                     }
                 }
                 if (result) // deleting the 1s row and shifting the other ones towards it
@@ -230,16 +278,16 @@ namespace TetrisX
                     {
                         for (int j = 0; j < xMax; j++)
                         {
-                            if (binaryGrid[k + 1, j] == 1) 
+                            if (binaryGrid[k + 1, j] == 1)
                             {
                                 playableArea[k + 1, j].Dispose(); // removing the old row
                             }
 
-                            if (binaryGrid[k, j] == 1) 
-                            {                            
+                            if (binaryGrid[k, j] == 1)
+                            {
                                 playableArea[k + 1, j] = ClonePB(playableArea[k, j]); // cloning the new row
                                 form.Add(playableArea[k + 1, j]);
-                            }                        
+                            }
 
                             binaryGrid[k + 1, j] = binaryGrid[k, j]; // levigin -> 2!!!                          
                         }
@@ -247,15 +295,15 @@ namespace TetrisX
 
                     scores += xMax * multiplyingCounter++; // Cheperis' calculations
 
-                    label.Text = "\n     Scores: " + scores; // displaying the scores
+                    label.Text = "\n     Scores: " + scores + "\n\n     Next figure: "; // displaying the scores
 
                     i++; // staying at the same row because of the fallen down rows above...
                 }
-            }          
+            }
         }
 
         private static PictureBox ClonePB(PictureBox pictureBox) // An accurate cloning of a PictureBox
-        { 
+        {
             PictureBox clone = new PictureBox();
 
             clone.Size = pictureBox.Size;
@@ -265,44 +313,23 @@ namespace TetrisX
             return clone;
         }
 
-        private static void GenerateNewFigure() 
-        { 
+        private static void DefineNextFigureNum() 
+        {
             Random random = new Random();
 
-            int figureNumber = random.Next(0, 7);
-            int rotationAngle = random.Next(0, 4); // for now this option is disabled
+            nextFigureNumber = random.Next(0, 7);       
+        }
 
-            int colour = random.Next(0, 4);
-
+        private static void GenerateNewFigure() 
+        {                    
             Color figureColor;
 
-            switch (colour) 
-            {
-                case 0:
-                    figureColor = Color.DarkRed;
-                    break;
-                case 1:
-                    figureColor = Color.Orange;
-                    break;
-                case 2:
-                    figureColor = Color.DarkGreen;
-                    break;
-                case 3:
-                    figureColor = Color.DarkBlue;
-                    break;
-                default:
-                    figureColor = Color.Black; // no way to choose this colour
-                    break;
-            }
+            figureColor = colorList[colorCounter++ % colorList.Count];
 
-            currentFigure = figures[figureNumber];
+            currentFigure = new List<Point>();
+            currentFigure.AddRange(figures[nextFigureNumber]); // cloning
 
             currentFigureCells = new List<PictureBox>();
-
-            /* for (int i = 0; i < rotationAngle; i++)
-            {
-                Rotate(true);
-            } */           
 
             currentFigureCoords = new Point(7, 1);
 
@@ -321,6 +348,10 @@ namespace TetrisX
 
                 form.Add(cell);
             }
+
+            DefineNextFigureNum();
+
+            DrawNextFigurePreview();
         }
 
         private static void GameOver() // listen to "Баллада о Плюсах"... баллажа!!!
@@ -403,10 +434,15 @@ namespace TetrisX
                 int X = currentFigure[i].Y * multiple;
                 int Y = -currentFigure[i].X * multiple;
 
-                if (binaryGrid[Y + currentFigureCoords.Y, X + currentFigureCoords.X] == 1 // if-> else: bug fix !!!
-                    || X + currentFigureCoords.X < 0 
-                    || X + currentFigureCoords.X >= xMax 
-                    || Y + currentFigureCoords.Y < 0) // rotation is not valid, list stays the same
+                if (X + currentFigureCoords.X >= 0
+                    && X + currentFigureCoords.X < xMax
+                    && Y + currentFigureCoords.Y >= 0
+                    && Y + currentFigureCoords.Y < yMax
+                    && binaryGrid[Y + currentFigureCoords.Y, X + currentFigureCoords.X] != 1) // rotation is not valid, list stays the same
+                { 
+                    // do nothing
+                }
+                else
                 {
                     currentFigure = newList;
                     return;
@@ -506,7 +542,7 @@ namespace TetrisX
         { 
             DownShifting();
 
-            // FullRowsRemoving(); // built rows collapsing
+            FullRowsRemoving(); // built rows collapsing
         }
 
         public class Figure
@@ -544,6 +580,15 @@ namespace TetrisX
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        }       
+        }
+
+        // 1. Меню -> можно ли сделать, кнопки паузы (ели надо) и рестарта игры.
+        // 2. Подсказка следующей фигуры в цвете
+        // 3. Красивая анимаия уничтожения заполненного ряда
+        // 4. Анимация GameOver
+        // 5. Увеличение скорости в процессе игры и начисление очков сообразно множителю скорости
+        // 6. Enum class -> что-то сделать???
+        // 7. Выход ротации за пределы поля -> обработать ++
+        // 6. Тестировка
     }
 }
