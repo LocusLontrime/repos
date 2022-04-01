@@ -33,7 +33,11 @@ namespace TetrisX
 
         private static int scores;
 
-        private static System.Windows.Forms.Timer timer;
+        private static System.Windows.Forms.Timer timer; // for the main update cycle
+        private static System.Windows.Forms.Timer timerX; // for the auxiliary features
+
+        private static int animationCounter; // it needs for timerX when animation is being displayed (Method Animate())
+        private static int rowToAnimateNumber; // We need to know which exactly row should be animated
 
         private static Control.ControlCollection form;
 
@@ -66,37 +70,37 @@ namespace TetrisX
             colorList.Add(Color.Purple);
 
             //Figures library
-            figures[0].Add(new Point(0, 0)); // the first one
+            figures[0].Add(new Point(0, 0)); // the first one PIN
             figures[0].Add(new Point(-1, 0));
-            figures[0].Add(new Point(0, -1));
+            figures[0].Add(new Point(0, 1));
             figures[0].Add(new Point(1, 0));
 
-            figures[1].Add(new Point(-1, -1)); // the second one
-            figures[1].Add(new Point(0, -1));
-            figures[1].Add(new Point(1, -1));
-            figures[1].Add(new Point(1, 0));
+            figures[1].Add(new Point(-1, 0)); // the second one JletterLeft
+            figures[1].Add(new Point(-1, 1));
+            figures[1].Add(new Point(0, 1));
+            figures[1].Add(new Point(1, 1));
 
-            figures[2].Add(new Point(-1, 1)); // the third one
+            figures[2].Add(new Point(-1, 1)); // the third one JletterRight
             figures[2].Add(new Point(0, 1));
             figures[2].Add(new Point(1, 1));
             figures[2].Add(new Point(1, 0));
 
-            figures[3].Add(new Point(-1, 0)); // the fourth one
+            figures[3].Add(new Point(-1, 0)); // the fourth one Stick
             figures[3].Add(new Point(0, 0));
             figures[3].Add(new Point(1, 0));
             figures[3].Add(new Point(2, 0));
 
-            figures[4].Add(new Point(0, 0)); // the fifth one (cube) with no rotation!!!!!
+            figures[4].Add(new Point(0, 0)); // the fifth one Cube with no rotation!!!!!
             figures[4].Add(new Point(1, 0));
             figures[4].Add(new Point(0, 1));
             figures[4].Add(new Point(1, 1));
 
-            figures[5].Add(new Point(-1, 0)); // the sixth one
+            figures[5].Add(new Point(-1, 0)); // the sixth one ZletterTopLeft
             figures[5].Add(new Point(0, 0));
             figures[5].Add(new Point(0, 1));
             figures[5].Add(new Point(1, 1));
 
-            figures[6].Add(new Point(-1, 1)); // the seventh one
+            figures[6].Add(new Point(-1, 1)); // the seventh one ZletterTopRight
             figures[6].Add(new Point(0, 1));
             figures[6].Add(new Point(0, 0));
             figures[6].Add(new Point(1, 0));
@@ -123,7 +127,7 @@ namespace TetrisX
 
             timer.Tick += new EventHandler(Update); // how to pause???
             timer.Interval = speed;
-            timer.Start();
+            timer.Start();                     
 
             nextFigure = new List<PictureBox>();
 
@@ -134,6 +138,26 @@ namespace TetrisX
 
             DefineNextFigureNum();
             GenerateNewFigure(); // creates a first figure on the field
+        }
+
+        private static void Animate(Object sender, EventArgs args) 
+        {
+            // here comes an animation of rows removing
+
+            if (animationCounter <= 7)
+            {
+                playableArea[rowToAnimateNumber, 7 + animationCounter].Image = new Bitmap(@"C:\Users\langr\Downloads\Explosion.bmp", true);
+                playableArea[rowToAnimateNumber, 7 - animationCounter].Image = new Bitmap(@"C:\Users\langr\Downloads\Explosion.bmp", true);
+                animationCounter++;
+            }
+            else 
+            { 
+                // disposing
+
+                timerX.Stop();
+                timerX.Dispose();
+                timer.Enabled = true;
+            }
         }
 
         private static void KeyPressedHandler(Object sender, KeyEventArgs args)
@@ -266,7 +290,7 @@ namespace TetrisX
             {
                 for (int l = 0; l < xMax - 1; l++)
                 {
-                    result = binaryGrid[i, l] == 1 ? true : false;
+                    result = binaryGrid[i, l] == 1 ? true : false; // Levigin's ternary
                     if (!result)
                     {
                         break;
@@ -274,13 +298,23 @@ namespace TetrisX
                 }
                 if (result) // deleting the 1s row and shifting the other ones towards it
                 {
+                    timerX = new System.Windows.Forms.Timer();
+
+                    timerX.Tick += new EventHandler(Animate);
+                    timerX.Interval = speed / 10;
+                    
+                    animationCounter = 0;
+                    rowToAnimateNumber = i;
+                    timerX.Start();
+                    timer.Enabled = false;
+
                     for (int k = i - 1; k >= 0; k--)
                     {
                         for (int j = 0; j < xMax; j++)
                         {
                             if (binaryGrid[k + 1, j] == 1)
                             {
-                                playableArea[k + 1, j].Dispose(); // removing the old row
+                                 // playableArea[k + 1, j].Dispose(); // removing the old row
                             }
 
                             if (binaryGrid[k, j] == 1)
