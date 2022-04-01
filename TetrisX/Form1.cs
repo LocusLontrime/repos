@@ -39,11 +39,17 @@ namespace TetrisX
         private static int animationCounter; // it needs for timerX when animation is being displayed (Method Animate())
         private static int rowToAnimateNumber; // We need to know which exactly row should be animated
 
+        private static List<int> rowsToBeDeleted; // rows fully filled with 1s, that will be deleted soon by invokation of
+                                                  // FullRowsRemoving method
+        private static bool flag;
+
         private static Control.ControlCollection form;
 
         public Form1()
         {
             InitializeComponent();
+
+            flag = true;
 
             form = this.Controls;
             this.Width = width;
@@ -127,9 +133,17 @@ namespace TetrisX
 
             timer.Tick += new EventHandler(Update); // how to pause???
             timer.Interval = speed;
-            timer.Start();                     
+            timer.Start();
 
+            timerX = new System.Windows.Forms.Timer();
+
+            timerX.Tick += new EventHandler(Animate);
+            timerX.Interval = speed / 10;
+            timerX.Start();
+            
             nextFigure = new List<PictureBox>();
+
+            rowsToBeDeleted = new List<int>();
 
             GenerateGrid(); // here we add a markUp
 
@@ -144,19 +158,30 @@ namespace TetrisX
         {
             // here comes an animation of rows removing
 
-            if (animationCounter <= 7)
+            if (!flag)
             {
-                playableArea[rowToAnimateNumber, 7 + animationCounter].Image = new Bitmap(@"C:\Users\langr\Downloads\Explosion.bmp", true);
-                playableArea[rowToAnimateNumber, 7 - animationCounter].Image = new Bitmap(@"C:\Users\langr\Downloads\Explosion.bmp", true);
-                animationCounter++;
-            }
-            else 
-            { 
-                // disposing
+                foreach (int i in rowsToBeDeleted)
+                {
+                    if (animationCounter <= 7)
+                    {
+                        playableArea[i, 7 + animationCounter].Image = new Bitmap(@"C:\Users\langr\Downloads\Explosion.bmp", true);
+                        playableArea[i, 7 - animationCounter].Image = new Bitmap(@"C:\Users\langr\Downloads\Explosion.bmp", true);
+                    }
+                    else
+                    {
+                        // disposing
 
-                timerX.Stop();
-                timerX.Dispose();
-                timer.Enabled = true;
+                        FullRowsRemoving();
+
+                        rowsToBeDeleted.Clear();
+
+                        flag = true;
+
+                        break;
+                    }
+                }
+
+                animationCounter++;    
             }
         }
 
@@ -280,15 +305,13 @@ namespace TetrisX
             }
         }
 
-        private static void FullRowsRemoving() // The method based on Levigin's algo
+        private static void FindAllOneFilledRows()
         {
             bool result = false; // if there is a row full of 1s
 
-            int multiplyingCounter = 1; // Cheperis idea
-
             for (int i = yMax - 1; i > 0; i--)
             {
-                for (int l = 0; l < xMax - 1; l++)
+                for (int l = 0; l <= xMax - 1; l++)
                 {
                     result = binaryGrid[i, l] == 1 ? true : false; // Levigin's ternary
                     if (!result)
@@ -296,44 +319,46 @@ namespace TetrisX
                         break;
                     }
                 }
-                if (result) // deleting the 1s row and shifting the other ones towards it
-                {
-                    timerX = new System.Windows.Forms.Timer();
 
-                    timerX.Tick += new EventHandler(Animate);
-                    timerX.Interval = speed / 10;
-                    
-                    animationCounter = 0;
-                    rowToAnimateNumber = i;
-                    timerX.Start();
-                    timer.Enabled = false;
-
-                    for (int k = i - 1; k >= 0; k--)
-                    {
-                        for (int j = 0; j < xMax; j++)
-                        {
-                            if (binaryGrid[k + 1, j] == 1)
-                            {
-                                 // playableArea[k + 1, j].Dispose(); // removing the old row
-                            }
-
-                            if (binaryGrid[k, j] == 1)
-                            {
-                                playableArea[k + 1, j] = ClonePB(playableArea[k, j]); // cloning the new row
-                                form.Add(playableArea[k + 1, j]);
-                            }
-
-                            binaryGrid[k + 1, j] = binaryGrid[k, j]; // levigin -> 2!!!                          
-                        }
-                    }
-
-                    scores += xMax * multiplyingCounter++; // Cheperis' calculations
-
-                    label.Text = "\n     Scores: " + scores + "\n\n     Next figure: "; // displaying the scores
-
-                    i++; // staying at the same row because of the fallen down rows above...
-                }
+                if (result) rowsToBeDeleted.Add(i);
             }
+
+
+        }
+
+        private static void FullRowsRemoving() // The method based on Levigin's algo
+        {
+            int deletedRowsCounter = 0;
+
+            int multiplyingCounter = 1; // Cheperis idea
+
+            foreach (int i in rowsToBeDeleted)
+            {                                    
+                for (int k = i + deletedRowsCounter - 1; k >= 0; k--)
+                {
+                    for (int j = 0; j < xMax; j++)
+                    {
+                        if (binaryGrid[k + 1, j] == 1)
+                        {
+                                playableArea[k + 1, j].Dispose(); // removing the old row
+                        }
+
+                        if (binaryGrid[k, j] == 1)
+                        {
+                            playableArea[k + 1, j] = ClonePB(playableArea[k, j]); // cloning the new row
+                            form.Add(playableArea[k + 1, j]);
+                        }
+
+                        binaryGrid[k + 1, j] = binaryGrid[k, j]; // levigin -> 2!!!                          
+                    }
+                }
+
+                scores += xMax * multiplyingCounter++; // Cheperis' calculations
+
+                label.Text = "\n     Scores: " + scores + "\n\n     Next figure: "; // displaying the scores
+
+                deletedRowsCounter++; // staying at the same row because of the fallen down rows above...             
+            }  
         }
 
         private static PictureBox ClonePB(PictureBox pictureBox) // An accurate cloning of a PictureBox
@@ -574,9 +599,19 @@ namespace TetrisX
 
         private static void Update(Object sender, EventArgs args) 
         { 
-            DownShifting();
+            if (flag) { 
+                DownShifting();
+                FindAllOneFilledRows();
 
-            FullRowsRemoving(); // built rows collapsing
+                if (rowsToBeDeleted.Count > 0) {
+              
+                    animationCounter = 0;
+
+                    flag = false;                                         
+                }
+
+                //if (flag) // built rows collapsing
+            }
         }
 
         public class Figure
@@ -599,7 +634,6 @@ namespace TetrisX
 
 
             }
-
         }
 
         public enum FigureType 
