@@ -1,29 +1,36 @@
-﻿public class Task25 // Задача 25: Напишите цикл, который принимает на вход
-                    // два натуральных числа (A и B) и возводит число A в степень B.
-{ 
+﻿public class Task29 // Напишите программу, которая задаёт массив из 8 случайных целых чисел
+                    // и выводит отсортированный по модулю массив
+{
     static void Main(string[] args)
     {
-        Console.WriteLine(Pow(5, 3));
-
-        Console.WriteLine(Pow(0, 0));
+        int[] array = new int[] { 1, 11, -69, 118, 9, -278, 0, 8, -36, 0, 98989 };
+        BubbleModSort(array);
+        PrintArray1D(array);
     }
 
-    public static int Pow(int baseNum, int power)    
+    public static void BubbleModSort(int[] array) // Rabotkin mode
     {
-        if (baseNum < 1 || power < 1) 
-        {
-            Console.WriteLine("baseNum and Power must be Nutural ones");
-            return 0;
-        }
-        
-        int result = 1;
+        int length = array.Length;
 
-        for (int i = 0; i < power; i++)
-        {
-            result *= baseNum;
-        }
+        int temp;
 
-        return result;
+        for (int i = length - 1; i > 0; i--) // количество всплытий
+        {
+            for (int j = 0; j < i; j++) // процедура всплытия пузырька
+            {
+                if (Math.Abs(array[j]) > Math.Abs(array[j + 1]))
+                {
+                    temp = array[j]; // element swapping
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                } 
+            }
+        }
     }
 
+    public static void PrintArray1D(int[] array) 
+    {
+        // easy peasy, keep Smitty!
+        for (int i = 0; i < array.Length; i++) Console.Write(array[i] + " ");
+    }
 }
