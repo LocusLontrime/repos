@@ -322,8 +322,6 @@ namespace TetrisX
 
                 if (result) rowsToBeDeleted.Add(i);
             }
-
-
         }
 
         private static void FullRowsRemoving() // The method based on Levigin's algo

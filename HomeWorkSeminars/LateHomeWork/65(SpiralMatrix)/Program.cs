@@ -1,20 +1,40 @@
 ﻿public class SpiralMatrix {
 
+    public static List<int[]> directions = new List<int[]>()
+        {
+            new int[] { 0, 1 },
+            new int[] { 1, 0 },
+            new int[] { 0, -1 },
+            new int[] { -1, 0 }
+        };
+
+    public static int jMax, iMax;
+
     public static void Main(String[] args) {
 
-        int[,] array = new int[45, 45];
+        int[,] array = new int[65, 45];
 
-        print_2D_array(array);
+        // print_2D_array(array);
 
-        Console.WriteLine();
+        // Console.WriteLine();
 
-        spiralOrder(array);
+        SpiralOrder(array); // cycle method call
 
         print_2D_array (array);
 
+        foreach (var item in directions) 
+        {
+            Console.WriteLine("jDelta: " + item[0] + " iDelta = " + item[1]);
+        }
+
+        int[,] matrix = new int[35, 15];
+
+        SpiralOrderAlt(matrix); // recursive method call
+
+        print_2D_array (matrix);
     }
 
-    public static void spiralOrder(int[,] matrix) // fulfilling the matrix with the numbers in spiral order
+    public static void SpiralOrder(int[,] matrix) // fulfilling the matrix with the numbers in spiral order
     {
         int height = matrix.GetLength(0);
         int width = matrix.GetLength(1);
@@ -86,6 +106,40 @@
         }
     }
 
+    public static void SpiralOrderAlt(int[,] matrix) 
+    { 
+        jMax = matrix.GetLength(0);
+        iMax = matrix.GetLength(1);
+        ZeroFill(matrix);
+        SpiralOrderRec(0, 1, 0, 0, matrix);
+    }
+
+    public static void SpiralOrderRec(int counter, int num, int j, int i, int[,] matrix)
+    {
+        matrix[j, i] = num; // filling
+
+        int jD = directions[counter % 4][0]; // deltas for next step Coords
+        int iD = directions[counter % 4][1];
+
+        if (counter > 2 * Math.Min(jMax, iMax)) return; // approx stop condition    
+
+        if (j + jD >= 0 && i + iD >= 0 && j + jD < jMax && i + iD < iMax && matrix[j + jD, i + iD] == 0) // forward branch
+        {          
+            SpiralOrderRec(counter, num + 1, j + jD, i + iD, matrix);
+        }
+        else // direction change branch
+        {           
+            SpiralOrderRec(counter + 1, num, j, i, matrix);
+        }
+    }
+
+    public static void ZeroFill(int[,] matrix)
+    {
+        for (int j = 0; j < matrix.GetLength(0); j++)        
+            for (int i = 0; i < matrix.GetLength(1); i++)           
+                matrix[j, i] = 0;                  
+    }
+
     public static void print_2D_array(int[,] array) // enhanced printing method, it prints the array in a more convenient way
     { // auxiliary method for 2D array printing
 
@@ -102,7 +156,5 @@
             }
             Console.WriteLine();  
         }
-
     }
-
 }

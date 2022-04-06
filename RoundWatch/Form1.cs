@@ -1,9 +1,20 @@
 using System.Timers;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+using System.Runtime.InteropServices; // Подключаем новое пространство имён
 
 namespace RoundWatch // 366
 {
     public partial class Form1 : Form
     {
+        [DllImport("user32", CharSet = CharSet.Auto)]
+        internal extern static bool PostMessage(IntPtr hWnd, uint Msg, uint WParam, uint LParam);
+
+        [DllImport("user32", CharSet = CharSet.Auto)]
+        internal extern static bool ReleaseCapture();
+
         private static int centerX, centerY;
         private static int secLength, minLength, hLength;
         private static PictureBox watch = new PictureBox();
@@ -29,7 +40,7 @@ namespace RoundWatch // 366
             minLength = 250;
             hLength = 175;
  
-            PictureBox watch = new PictureBox();
+            /* PictureBox watch = new PictureBox();
             watch.Size = new Size(900, 900);
             watch.Location = new Point(350, 50);
             watch.Image = new Bitmap(@"C:\Users\langr\Downloads\WatchOne.bmp", true);   
@@ -37,14 +48,14 @@ namespace RoundWatch // 366
             watch.Dock = DockStyle.Fill;
             watch.SizeMode = PictureBoxSizeMode.Zoom;
 
-            form.Add(watch);
+            form.Add(watch); */
 
             // watch.BackColor = Color.White;
 
             centerX = 900 / 2;
             centerY = 900 / 2;
 
-            g = watch.CreateGraphics();
+            g = pictureBox1.CreateGraphics();
 
             timer.Tick += new EventHandler(TickTime);
             timer.Interval = 1000;
@@ -89,6 +100,15 @@ namespace RoundWatch // 366
             int newX = centerX + (int) (minLength * Math.Sin(Math.PI * (mins * 6 + secs / 10) / 180));
 
             return new Point(newX, newY);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            const uint WM_SYSCOMMAND = 0x0112;
+            const uint DOMOVE = 0xF012;
+
+            ReleaseCapture();
+            PostMessage(this.Handle, WM_SYSCOMMAND, DOMOVE, 0);
         }
 
         private Point HourHandCoords(int hours, int mins) 
