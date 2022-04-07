@@ -117,20 +117,14 @@
     public static void SpiralOrderRec(int counter, int num, int j, int i, int[,] matrix)
     {
         matrix[j, i] = num; // filling
-
         int jD = directions[counter % 4][0]; // deltas for next step Coords
         int iD = directions[counter % 4][1];
 
-        if (counter > 2 * Math.Min(jMax, iMax)) return; // approx stop condition    
-
-        if (j + jD >= 0 && i + iD >= 0 && j + jD < jMax && i + iD < iMax && matrix[j + jD, i + iD] == 0) // forward branch
-        {          
-            SpiralOrderRec(counter, num + 1, j + jD, i + iD, matrix);
-        }
-        else // direction change branch
-        {           
-            SpiralOrderRec(counter + 1, num, j, i, matrix);
-        }
+        if (counter > 2 * Math.Min(jMax, iMax)) return; // approx stop condition
+                                                        // 
+        // forward branch
+        if (j + jD >= 0 && i + iD >= 0 && j + jD < jMax && i + iD < iMax && matrix[j + jD, i + iD] == 0) SpiralOrderRec(counter, num + 1, j + jD, i + iD, matrix);
+        else SpiralOrderRec(counter + 1, num, j, i, matrix); // direction change branch
     }
 
     public static void ZeroFill(int[,] matrix)
