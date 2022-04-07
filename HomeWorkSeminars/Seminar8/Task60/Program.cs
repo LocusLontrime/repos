@@ -1,9 +1,9 @@
 ﻿public class Task60 // Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
                     // Напишите программу, которая построчно выведет элементы и их индексы
 {
-    static void Main(string[] args)
+    static void Main(string[] args) // 36xttl98m
     {
-        int[,,] Array3D = GetArray3D(100, 100, 100);
+        int[,,] Array3D = GetArray3D(100, 100, 100); // there will be a show...)
     }
 
     public static int[,,] GetArray3D(int p, int q, int r)

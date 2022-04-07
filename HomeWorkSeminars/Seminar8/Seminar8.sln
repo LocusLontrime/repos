@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask1", "AddTask1\AddTask1.csproj", "{F0165E27-50D4-404D-9ECB-5BCBDD5B216B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "65(SpiralMatrix)", "..\LateHomeWork\65(SpiralMatrix)\65(SpiralMatrix).csproj", "{A7FFBFC9-2404-4F4C-A6A3-AC1543F0DE09}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask2", "AddTask2\AddTask2.csproj", "{F8F5DDCE-F665-4470-9144-298E63206575}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask3", "AddTask3\AddTask3.csproj", "{9AD58328-C57B-483A-95D8-39282677627E}"
@@ -15,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask4", "AddTask4\AddTas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task54", "Task54\Task54.csproj", "{BD27A6BF-CA20-4F1E-A586-FF17A516D3EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task56", "Task56\Task56.csproj", "{8786F6C0-2811-40E7-AA4B-1D871B51C835}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task56", "Task56\Task56.csproj", "{8786F6C0-2811-40E7-AA4B-1D871B51C835}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task58", "Task58\Task58.csproj", "{9A8ED759-CE23-4AC2-AE5E-C7ECDFDFCE4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task58", "Task58\Task58.csproj", "{9A8ED759-CE23-4AC2-AE5E-C7ECDFDFCE4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task60", "Task60\Task60.csproj", "{EE4A21E9-2869-4C69-A165-A3DF3275E8DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task60", "Task60\Task60.csproj", "{EE4A21E9-2869-4C69-A165-A3DF3275E8DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "65(SpiralMatrix)", "65(SpiralMatrix)\65(SpiralMatrix).csproj", "{8A5BFDCE-98D1-49B4-80D3-828835F9C537}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,6 @@ Global
 		{F0165E27-50D4-404D-9ECB-5BCBDD5B216B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0165E27-50D4-404D-9ECB-5BCBDD5B216B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0165E27-50D4-404D-9ECB-5BCBDD5B216B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A7FFBFC9-2404-4F4C-A6A3-AC1543F0DE09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7FFBFC9-2404-4F4C-A6A3-AC1543F0DE09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7FFBFC9-2404-4F4C-A6A3-AC1543F0DE09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7FFBFC9-2404-4F4C-A6A3-AC1543F0DE09}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F8F5DDCE-F665-4470-9144-298E63206575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F8F5DDCE-F665-4470-9144-298E63206575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8F5DDCE-F665-4470-9144-298E63206575}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{EE4A21E9-2869-4C69-A165-A3DF3275E8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE4A21E9-2869-4C69-A165-A3DF3275E8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE4A21E9-2869-4C69-A165-A3DF3275E8DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5BFDCE-98D1-49B4-80D3-828835F9C537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5BFDCE-98D1-49B4-80D3-828835F9C537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5BFDCE-98D1-49B4-80D3-828835F9C537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5BFDCE-98D1-49B4-80D3-828835F9C537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
