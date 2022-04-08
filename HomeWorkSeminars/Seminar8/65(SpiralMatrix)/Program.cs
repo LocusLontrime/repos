@@ -14,18 +14,9 @@
 
         int[,] array = new int[65, 45];
 
-        // print_2D_array(array);
-
-        // Console.WriteLine();
-
         SpiralOrder(array); // cycle method call
 
         print_2D_array (array);
-
-        foreach (var item in directions) 
-        {
-            Console.WriteLine("jDelta: " + item[0] + " iDelta = " + item[1]);
-        }
 
         int[,] matrix = new int[35, 15];
 

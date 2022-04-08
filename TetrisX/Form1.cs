@@ -2,9 +2,9 @@ namespace TetrisX
 {
     public partial class Form1 : Form // split tetris -> 2 in 1
     {
+        // area size section
         private static int width = 1000;
-        private static int height = 1050;
-        private static int speed = 500;
+        private static int height = 1050;       
 
         private static readonly int cubeSide = 50;
 
@@ -31,8 +31,12 @@ namespace TetrisX
 
         private static Label label;
 
+        // speed and scores section
+        private static int speed = 500;
         private static int scores;
+        private static int deletedRowsCounter; // the parameter, wich the current speed of the game depends on
 
+        // timers section
         private static System.Windows.Forms.Timer timer; // for the main update cycle
         private static System.Windows.Forms.Timer timerX; // for the auxiliary features
 
@@ -56,6 +60,7 @@ namespace TetrisX
             this.Height = height;
 
             scores = 0;
+            deletedRowsCounter = 0;
 
             figures = new List<List<Point>>();
 
@@ -158,11 +163,11 @@ namespace TetrisX
         {
             // here comes an animation of rows removing
 
-            if (!flag)
+            if (!flag) // being invoked while the main update cycle is on the pause (flag = false)
             {
                 foreach (int i in rowsToBeDeleted)
                 {
-                    if (animationCounter <= 7)
+                    if (animationCounter <= 7) // as 7 + 1 + 7 = 15 -> width of the Tetris field in cubeSides
                     {
                         playableArea[i, 7 + animationCounter].Image = new Bitmap(@"C:\Users\langr\Downloads\Explosion.bmp", true);
                         playableArea[i, 7 - animationCounter].Image = new Bitmap(@"C:\Users\langr\Downloads\Explosion.bmp", true);
@@ -170,11 +175,11 @@ namespace TetrisX
                     else
                     {
                         // disposing
-
                         FullRowsRemoving();
 
-                        rowsToBeDeleted.Clear();
+                        deletedRowsCounter += rowsToBeDeleted.Count;
 
+                        rowsToBeDeleted.Clear();
                         flag = true;
 
                         break;
@@ -601,14 +606,19 @@ namespace TetrisX
                 DownShifting();
                 FindAllOneFilledRows();
 
+                if (deletedRowsCounter >= 3) // tune this!!!
+                {
+                    deletedRowsCounter = 0;
+                    speed = (int) (speed * 0.9);
+                    timer.Interval = speed;
+                }
+
                 if (rowsToBeDeleted.Count > 0) {
               
                     animationCounter = 0;
 
                     flag = false;                                         
                 }
-
-                //if (flag) // built rows collapsing
             }
         }
 
@@ -649,12 +659,12 @@ namespace TetrisX
         }
 
         // 1. Меню -> можно ли сделать, кнопки паузы (ели надо) и рестарта игры.
-        // 2. Подсказка следующей фигуры в цвете
-        // 3. Красивая анимаия уничтожения заполненного ряда
-        // 4. Анимация GameOver
+        // 2. ++Подсказка следующей фигуры в цвете, скорректировать расположение
+        // 3. ++Красивая анимация уничтожения заполненного ряда 
+        // 4. Анимация GameOver и приостановка цикла апдейт до выбора следующей игры
         // 5. Увеличение скорости в процессе игры и начисление очков сообразно множителю скорости
         // 6. Enum class -> что-то сделать???
-        // 7. Выход ротации за пределы поля -> обработать ++
-        // 6. Тестировка
+        // 7. ++Выход ротации за пределы поля -> обработать 
+        // 6. -+Тестировка 
     }
 }
