@@ -1,7 +1,7 @@
 ﻿using AuxLib;
 using System.Diagnostics;
 
-public class SortAnArray912 // MergeSort
+public class SortAnArray912 // MergeSort accepted (speed: fast, 209 ms, beats 86.00% of C# submissions)
 {
     public static int n;
     static void Main(string[] args)

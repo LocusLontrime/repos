@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-public class Akkerman
+public class Akkerman // Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n
 {
     static void Main(string[] args)
     {
@@ -11,7 +11,8 @@ public class Akkerman
         // Console.WriteLine((int)Math.Log2(d) + 1);
     }
 
-    public static BigInteger AkkermanRecursion(BigInteger m, BigInteger n)
+    public static BigInteger AkkermanRecursion(BigInteger m, BigInteger n) // earnest request: invoke method very carefully, optimization of this stupid rec
+                                                                           // is equal to negative infinity...
     {
         if (m == 0) return n + 1;
         if (m > 0 && n == 0) return AkkermanRecursion(m - 1, 1);

@@ -57,9 +57,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SomeHelpfulMethods", "SomeH
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku_Solver_37", "Sudoku_Solver_37\Sudoku_Solver_37.csproj", "{1257C636-FE7B-475D-87A2-0B091D0933D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letter_Combinations_of_a_Phone_Number_17", "Letter_Combinations_of_a_Phone_Number_17\Letter_Combinations_of_a_Phone_Number_17.csproj", "{CABA54C7-E5A7-456A-A77C-FE3B188D9362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Letter_Combinations_of_a_Phone_Number_17", "Letter_Combinations_of_a_Phone_Number_17\Letter_Combinations_of_a_Phone_Number_17.csproj", "{CABA54C7-E5A7-456A-A77C-FE3B188D9362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generate_Parentheses_22", "Generate_Parentheses_22\Generate_Parentheses_22.csproj", "{623524B0-D4B5-47A8-AF7A-15BAB276A6AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generate_Parentheses_22", "Generate_Parentheses_22\Generate_Parentheses_22.csproj", "{623524B0-D4B5-47A8-AF7A-15BAB276A6AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search_a_2D_Matrix_II_240", "Search_a_2D_Matrix_II_240\Search_a_2D_Matrix_II_240.csproj", "{715BF7D8-5784-4161-9240-7FE975892598}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,6 +185,10 @@ Global
 		{623524B0-D4B5-47A8-AF7A-15BAB276A6AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{623524B0-D4B5-47A8-AF7A-15BAB276A6AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{623524B0-D4B5-47A8-AF7A-15BAB276A6AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715BF7D8-5784-4161-9240-7FE975892598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715BF7D8-5784-4161-9240-7FE975892598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715BF7D8-5784-4161-9240-7FE975892598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715BF7D8-5784-4161-9240-7FE975892598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
