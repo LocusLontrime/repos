@@ -1,4 +1,4 @@
-﻿public class Search2DMatrixII240 // 36 989
+﻿public class Search2DMatrixII240 // 36 989 accepted (speed: fast, 156ms, beats 85.57% of C# submissions)
 {
     static void Main(string[] args)
     {
@@ -25,11 +25,10 @@
         if (j < 0 || i >= matrix[0].Length) return false;
         if (matrix[j][i] == target) 
         {
-            Console.WriteLine($"The coordinates of target {target} are: ({j}, {i})");
+            Console.WriteLine($"The coordinates of target {target} are: ({j}, {i})"); // just to see the position of an element to find
             return true; 
         }
         else if (target < matrix[j][i]) return RecSeeker(j - 1, i, matrix, target);
         else return RecSeeker(j, i + 1, matrix, target);
     }
-
 }
