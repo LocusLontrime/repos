@@ -2,7 +2,7 @@
 {
     static void Main(string[] args)
     {
-        CountPositiveIntegers(9);
+        Console.WriteLine(CountPositiveIntegers(9));
     }
 
     public static int CountPositiveIntegers(int M) 

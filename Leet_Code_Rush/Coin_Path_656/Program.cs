@@ -1,6 +1,7 @@
-﻿public class CoinPat656 // 366
+﻿public class CoinPath656 // 366
 {
-    public static long[] memoTable;
+    public static long[] memoTable; // accepted (speed: 199ms, beats 100% of C# submissions) -> solve the problem of endless recursion
+                                    //                                                          in the -1 final point case
 
     static void Main(string[] args)
     {
@@ -18,17 +19,17 @@
 
     public static IList<int> CheapestJump(int[] coins, int maxJump)
     {
-        if (coins[coins.Length - 1] == -1) return new List<int> ();
+        if (coins[coins.Length - 1] == -1) return new List<int> (); // if there is no way (-1 is in the end) 
 
         int[] array = new int[coins.Length];
         memoTable = new long[coins.Length];
 
         List<int> list = new List<int>();
 
-        Array.Fill(array, -1);
+        Array.Fill(array, -1); // initial filling
         Array.Fill(memoTable, 0);
 
-        CoinJumpsCostRec(0, maxJump, coins, array);
+        CoinJumpsCostRec(0, maxJump, coins, array);// recursion call
 
         int index;
 
@@ -37,7 +38,7 @@
             list.Add(index + 1); // + 1 as we should add the number of position and they are natural ones and start with 1, not 0.
         }      
 
-        if (index == array.Length - 1 && coins[coins.Length - 1] >= 0)
+        if (index == array.Length - 1 && coins[coins.Length - 1] >= 0) // if we reach the last index and it is not prohibited by -1 value
         {
             list.Add(array.Length);
         }
@@ -46,7 +47,7 @@
             return new List<int>(); // an empty list if there no pass exists
         }
 
-        return list;
+        return list; // return the list built
     }
 
     public static long CoinJumpsCostRec(int i, int maxJump, int[] coins, int[] array) 

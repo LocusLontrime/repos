@@ -4,11 +4,9 @@
     static void Main(string[] args)
     {
         double[] point = PointOfIntersection(1, 3, 11, 16);
-
         Console.WriteLine(point[0] + " " + point[1]);
 
         point = PointOfIntersection(1, 3, 1, 7);
-
         Console.WriteLine(point[0] + " " + point[1]);
     }
 
@@ -29,11 +27,9 @@
         else 
         { 
             point[0] = 1.0 * (b1 - b2) / (k2 - k1);
-
             point[1] = k1 * point[0] + b1;
         }
 
         return point;
     }
-
 }

@@ -12,7 +12,7 @@
 
     public static int GetElement(int j, int i, int[,] array) 
     {
-        if (j > 0 && i > 0 && j < array.GetLength(0) && i < array.GetLength(1))
+        if (j >= 0 && i >= 0 && j < array.GetLength(0) && i < array.GetLength(1))
         {
             return array[j, i];
         }

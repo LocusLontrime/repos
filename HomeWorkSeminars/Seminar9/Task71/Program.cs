@@ -4,7 +4,7 @@ public class Akkerman // Напишите программу вычислени�
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(AkkermanRecursion(3, 6));
+        Console.WriteLine(AkkermanRecursion(2, 2));
 
         // BigInteger bigInteger = new BigInteger(new byte[] { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 });
         // double d = Math.Pow(10, 20);
