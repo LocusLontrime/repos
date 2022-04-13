@@ -13,7 +13,7 @@ public class Akkerman // Напишите программу вычислени�
 
     public static BigInteger AkkermanRecursion(BigInteger m, BigInteger n) // earnest request: invoke method very carefully, optimization of this stupid rec
                                                                            // is equal to negative infinity...
-    {
+    { // two variables Akkerman
         if (m == 0) return n + 1;
         if (m > 0 && n == 0) return AkkermanRecursion(m - 1, 1);
         if (m > 0 && n > 0) return AkkermanRecursion(m - 1, AkkermanRecursion(m, n - 1));

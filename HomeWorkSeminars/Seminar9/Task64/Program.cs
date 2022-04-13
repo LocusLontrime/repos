@@ -4,7 +4,7 @@
     static void Main(string[] args)
     {
         PrintThoseOnesRec(15, 36, 3); // case of 3
-        PrintThoseOnesRec(1, 989, 98); // case of 98
+        PrintThoseOnesRec(1, 989, 92); // case of 98
     }
 
     public static void PrintThoseOnesRec(int M, int N, int devisor) 

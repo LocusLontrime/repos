@@ -7,7 +7,7 @@
 
         // seq = "Рус толстопуз";
 
-        Console.WriteLine(RecursiveCounter(0, seq));
+        Console.WriteLine("The words quantity: " + RecursiveCounter(0, seq));
 
         // Console.WriteLine(seq.Remove(0, 7));
     }

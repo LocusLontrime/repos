@@ -11,12 +11,12 @@
 
         // Console.WriteLine(RecSum(5, 6, 0));
     }
-    public static void Power(int a, int b) // covering
+    public static void Power(int a, int b) // the covering of the Recursive method
     {
         Pow(a, a, a, a, b, 0);
     }
 
-    public static void Pow(int currA, int a, int currB, int b, int c, int result) // too much recursion
+    public static void Pow(int currA, int a, int currB, int b, int c, int result) // too much recursion, my own method
     {
         // border case
         if (c == 1)
@@ -25,6 +25,7 @@
             return;
         }
    
+        // the core of met
         if (currB == 0) 
         {
             Pow(result, result, b, b, c - 1, 0);
@@ -44,7 +45,7 @@
         else return SecretRecursion(m, SecretRecursion(m, n - 1, p), p - 1);      
     }
 
-    public static int RecSum(int m, int n, int result)
+    public static int RecSum(int m, int n, int result) // an auxiliary one to the Akkerman ...)
     {
         if (n == 0 && m == 0) return result;
         
