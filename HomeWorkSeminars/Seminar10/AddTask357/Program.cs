@@ -1,4 +1,5 @@
 ﻿using Nito.Collections;
+using System.Numerics;
 
 public class AddTask357 //Необходимо реализовать алгоритм, вычисляющий n-ый член упорядоченного числового ряда,
                         //при факторизации элементов которого могут быть получены только следующие делители: 3, 5 и 7.
@@ -7,9 +8,11 @@ public class AddTask357 //Необходимо реализовать алгор
     {       
         // FindKthMemberOfSeq(912); // method call -> prints all the values that are less than or equals to K-th element
                                  
-        List<int> factorsList = new List<int>() { 2, 3, 5, 7, 11 };
+        List<int> factorsList = new List<int>() { 2, 3, 101 };
 
-        FindKthMemberOfSeq(factorsList, 28);
+        FindKthMemberOfSeq(factorsList, 10000, true);
+
+        Console.WriteLine("\n1000000-th member of a row: " + FindKthMemberOfSeq(factorsList, 10000000, false)); // fast without printing
     }
 
     public static long FindKthMemberOfSeq(int k) // an easy-peasy version
@@ -19,6 +22,8 @@ public class AddTask357 //Необходимо реализовать алгор
         Deque<long> q3 = new Deque<long>(); // initialization of queues
         Deque<long> q5 = new Deque<long>();
         Deque<long> q7 = new Deque<long>();
+
+        int counter = 1; // counts the iteration
 
         q3.AddToFront(1); // initial element in the first queue
 
@@ -32,7 +37,7 @@ public class AddTask357 //Необходимо реализовать алгор
 
             minCurrVal = Math.Min(currVal3, Math.Min(currVal5, currVal7)); // we find the min element of the three values above
 
-            Console.WriteLine(minCurrVal);
+            Console.WriteLine($"{minCurrVal} -> {counter++}-th member of a row");
 
             if (minCurrVal == currVal3) // we define which queues keeps the currElement
             {
@@ -56,22 +61,24 @@ public class AddTask357 //Необходимо реализовать алгор
         return minCurrVal; // returning the value found
     }
 
-    public static long FindKthMemberOfSeq(List<int> primeDevisors, int k) // a serious one
+    public static BigInteger FindKthMemberOfSeq(List<int> primeDevisors, int k, bool printFlag) // a serious one
     { 
         if (primeDevisors.Count == 0) return -1; // wrong case        
 
-        Dictionary<long, Deque<long>> dequesDictionary = new Dictionary<long, Deque<long>>(); // dict initialization
+        Dictionary<long, Deque<BigInteger>> dequesDictionary = new Dictionary<long, Deque<BigInteger>>(); // dict initialization
 
-        long[] currVals = new long[primeDevisors.Count]; // current values -> the first elements of queques
+        int counter = 1; // counts the iteration
+
+        BigInteger[] currVals = new BigInteger[primeDevisors.Count]; // current values -> the first elements of queques
 
         foreach (int prime in primeDevisors) // initialization of queues
         { 
-            dequesDictionary.Add(prime, new Deque<long>());
+            dequesDictionary.Add(prime, new Deque<BigInteger>());
         }
    
         dequesDictionary[primeDevisors[0]].AddToFront(1); // initial element in the first queue
 
-        long minCurrVal = long.MaxValue; // the min element among the currVals
+        BigInteger minCurrVal = 0; // the min element among the currVals
 
         for (int i = 0; i < k; i++) // cycling all over the iterations (< k)
         {
@@ -83,10 +90,10 @@ public class AddTask357 //Необходимо реализовать алгор
                 currVals[j] = dequesDictionary[primeDevisors[j]].Count > 0 ? dequesDictionary[primeDevisors[j]].First() : long.MaxValue;
 
                 // calculating the minCurrVal
-                minCurrVal = Math.Min(minCurrVal, currVals[j]); // we find the min element of the values above
+                minCurrVal = j == 0 ? currVals[j] : BigInteger.Min(minCurrVal, currVals[j]); // we find the min element of the values above
             }
           
-            Console.WriteLine(minCurrVal); // just printing
+            if (printFlag) Console.WriteLine($"{minCurrVal} -> {counter++}-th member of a row"); // just printing
 
             for (int j = 0; j < primeDevisors.Count; j++) // cycling all over the devisors given
             {

@@ -5,7 +5,7 @@
     public static string numbers = "0123456789";
     public static int counterRec;
 
-    public static List<string> list = new List<string>();
+    public static List<string> list = new List<string>(); // 366
 
     static void Main(string[] args)
     {
@@ -14,8 +14,10 @@
 
         counterRec = 0;
 
-        PrintAllCombinations(5, ""); // method call
+        PrintAllCombinations(5, ""); // method call, a long way coz printing has huge time costs
         Console.WriteLine($"Recursion has been invoked {counterRec} times"); // operations quantity
+
+        // Console.WriteLine(Math.Pow(letters.Length + numbers.Length, 5)); // -> just a test
     }
 
     public static void PrintAllCombinations(int length, string str) 
