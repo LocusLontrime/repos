@@ -6,9 +6,9 @@ public class SudokuSolver37 // accepted (speed: 148ms, very fast, beats 93.12% o
     // We need to keep sets of rows, columns and squares so that the numbers do not repeat in these sets.
     // Thus, we should implement three 2D-arrays: rows, columns and squares
 
-    public static int[,] rows = new int[9, 9];    // to keep the indo about numbers used in the every row of the board given
-    public static int[,] columns = new int[9, 9]; // to keep the indo about numbers used in the every column of the board given
-    public static int[,] squares = new int[9, 9]; // to keep the indo about numbers used in the every square of the board given
+    public static int[,] rows = new int[9, 9];    // to keep the info about numbers used in the every row of the board given
+    public static int[,] columns = new int[9, 9]; // to keep the info about numbers used in the every column of the board given
+    public static int[,] squares = new int[9, 9]; // to keep the info about numbers used in the every square of the board given
 
     public static char[,] board; // storing the board given
 

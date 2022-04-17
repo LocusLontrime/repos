@@ -12,7 +12,9 @@ public class AddTask357 //Необходимо реализовать алгор
 
         FindKthMemberOfSeq(factorsList, 10000, true);
 
-        Console.WriteLine("\n1000000-th member of a row: " + FindKthMemberOfSeq(factorsList, 10000000, false)); // fast without printing
+        int k = 1000000000;// 1 minute of calcs approx ащк 10^8 and 
+
+        Console.WriteLine($"\n{k}-th member of a row: " + FindKthMemberOfSeq(factorsList, k, false)); // fast without printing
     }
 
     public static long FindKthMemberOfSeq(int k) // an easy-peasy version
@@ -61,7 +63,7 @@ public class AddTask357 //Необходимо реализовать алгор
         return minCurrVal; // returning the value found
     }
 
-    public static BigInteger FindKthMemberOfSeq(List<int> primeDevisors, int k, bool printFlag) // a serious one
+    public static BigInteger FindKthMemberOfSeq(List<int> primeDevisors, int k, bool printFlag) // a serious one with a long math
     { 
         if (primeDevisors.Count == 0) return -1; // wrong case        
 
