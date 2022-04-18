@@ -4,23 +4,34 @@
                        // The horse pronlem...)
 {
     public static int[,] memoTable; // memo table for the recursion
-    public static int recCounter; // how many times the recursion has been invoked
+    public static long recCounter; // how many times the recursion has been invoked
     public static int maxSteps;
 
+    public static int jSize, iSize;
+
     static void Main(string[] args)
-    {       
+    {
+        jSize = 36; // Chess-field size
+        iSize = 36;
+
         Console.WriteLine("Max steps: " + StartRec()); // an extended method call
 
         Console.WriteLine();
 
-        Console.WriteLine("Min steps: " + MinStepsToCell(3, 4, 5, 7) + "\n"); // addTask2 method call
-        MemoPrint();
+        int minSteps = MinStepsToCell(3, 4, 5, 7);
+
+        Console.WriteLine("Min steps: " + minSteps + "\n"); // addTask2 method call
+        // MemoPrint();
+
+        int maxSteps = MaxElementInMemoTable(); 
+
+        Print_2D_array(memoTable, maxSteps);
     }
 
     public static int StartRec() // searches the max steps needed for the Knight starting at
                                                        // the random place to beat a random located Chess-figure
     {
-        memoTable = new int[8, 8];
+        memoTable = new int[jSize, iSize];
         maxSteps = 0;
         recCounter = 0;
 
@@ -42,7 +53,7 @@
     public static int MinStepsToCell(int startJ, int startI, int endJ, int endI) // Method for the AddTask2 -> calcs min steps needed for the Knight
                                                                                  // to reaches the cell (endJ, endI) from the cell (startJ, startI);
     {
-        memoTable = new int[8, 8];
+        memoTable = new int[jSize, iSize];
         recCounter = 0;
 
         MemoInit(); // initialization of the memoTable
@@ -110,6 +121,22 @@
                 Console.Write(memoTable[j, i] + " ");
             }
 
+            Console.WriteLine();
+        }
+    }
+
+    public static void Print_2D_array(int[,] array, int maxValue) // enhanced printing method, it prints the array in a more convenient way
+    { // auxiliary method for 2D array printing        
+        int length = (int)Math.Log10(maxValue) + 1;
+
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                int currentNumberLength = array[i, j] != 0 ? (int)Math.Log10(array[i, j]) + 1 : 1;
+                Console.Write(array[i, j]);
+                for (int k = 0; k <= length - currentNumberLength; k++) Console.Write(" ");
+            }
             Console.WriteLine();
         }
     }
