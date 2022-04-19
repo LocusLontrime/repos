@@ -1,7 +1,7 @@
 ﻿public class AdddTask2 // Шахматный конь стоит на поле с координатами (x1, y1).
                        // Сколько ходов ему потребуется сделать, чтобы забрать
                        // неподвижную фигуру на поле (x2, y2)
-                       // The horse pronlem...)
+                       // The horse problem...)
 {
     public static int[,] memoTable; // memo table for the recursion
     public static long recCounter; // how many times the recursion has been invoked
@@ -11,8 +11,8 @@
 
     static void Main(string[] args)
     {
-        jSize = 36; // Chess-field size
-        iSize = 36;
+        jSize = 98; // Chess-field size
+        iSize = 98;
 
         Console.WriteLine("Max steps: " + StartRec()); // an extended method call
 
@@ -29,7 +29,7 @@
     }
 
     public static int StartRec() // searches the max steps needed for the Knight starting at
-                                                       // the random place to beat a random located Chess-figure
+                                 // the random place to beat a random located Chess-figure
     {
         memoTable = new int[jSize, iSize];
         maxSteps = 0;
@@ -86,6 +86,9 @@
         }
     }
 
+    // auxiliary method for the one above, checks if the cell is Valid
+    public static bool IsCoordsValid(int j, int i) => j >= 0 && i >= 0 && j < memoTable.GetLength(0) && i < memoTable.GetLength(1);
+
     public static int MaxElementInMemoTable() // here we search for the max element in the memoTable
     {
         int maxElement = int.MinValue;
@@ -140,7 +143,4 @@
             Console.WriteLine();
         }
     }
-
-    // checks if the cell is Valid
-    public static bool IsCoordsValid(int j, int i) => j >= 0 && i >= 0 && j < memoTable.GetLength(0) && i < memoTable.GetLength(1); 
 }
