@@ -12,17 +12,19 @@
             {101, 102, 111, 203, 245}
         };
 
-        matrix = RandomArray2D(10000, 10000, 10);
+        matrix = RandomArray2D(10000, 10000, 10); // matrix size and max step for the random filling
 
         Console.WriteLine("Max element of matrix: " + matrix[9999, 9999] + "\n");
 
+        // linear runtime method
         CoordsSearch(matrix, 99999999);
+
+        // log runtime method
+        MatrixBinSearch(matrix, 99999999);
 
         // int[] array = new int[] { 1, 2, 4, 5, 11, 15, 16, 17, 22, 23, 35, 48, 54, 78, 91, 94, 96, 97, 98, 99};
 
         // Console.WriteLine(SpecialBinSearch(array, 95));
-
-        MatrixBinSearch(matrix, 99999999);
     }
 
     public static void CoordsSearch(int[,] matrix, int element) // O(n + m) runtime, not optimized, there is a method with O(log(max(n,m))) runtime
@@ -113,7 +115,7 @@
 
     // bin search through the matrix's rows
     public static int RecBinVertical(int[,] matrix, int jStart, int jEnd, int target) // we are searching for the index of the target in the first column
-                                                                              // of the matrix given
+                                                                                      // of the matrix given
     {
         searchCounter++;
 
@@ -132,7 +134,7 @@
 
     // bin search in the chosen matrix row
     public static int RecBinHorizontal(int[,] matrix, int iLeft, int iRight, int row, int target) // we are searching for the index of the target
-                                                                                         // in the current row of the matrix given
+                                                                                                  // in the current row of the matrix given
     {
         searchCounter++;
 
@@ -149,7 +151,7 @@
         else return RecBinHorizontal(matrix, iLeft, pivotIndex, row, target);
     }
 
-    public static int[,] RandomArray2D(int height, int width, int step)
+    public static int[,] RandomArray2D(int height, int width, int step) // array2D random filling with the step given 
     {
         int[,] matrix = new int[height, width];
 

@@ -7,15 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1", "Task1\Task1.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2", "Task2\Task2.csproj", "{7361C657-1537-4BB4-B76F-FA71B3CBCF35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxProduct", "MaxProduct\MaxProduct.csproj", "{26C5F477-C249-4FBD-AB2F-5557B0870300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxProduct", "MaxProduct\MaxProduct.csproj", "{26C5F477-C249-4FBD-AB2F-5557B0870300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTask1", "AddTask1\AddTask1.csproj", "{EDF871B5-7BB0-4D44-AE09-74DFA498F1EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask1", "AddTask1\AddTask1.csproj", "{EDF871B5-7BB0-4D44-AE09-74DFA498F1EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTask2", "AddTask2\AddTask2.csproj", "{3885AF16-7F1E-40ED-85AB-31A937DFF71D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask2", "AddTask2\AddTask2.csproj", "{3885AF16-7F1E-40ED-85AB-31A937DFF71D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTask3", "AddTask3\AddTask3.csproj", "{02EE6936-7742-4D12-A1F3-30442990E17E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTask3", "AddTask3\AddTask3.csproj", "{02EE6936-7742-4D12-A1F3-30442990E17E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3", "Task3\Task3.csproj", "{FFF6AF57-CD38-4AA1-A977-A39FA51AB513}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumEqualsNumPairs", "SumEqualsNumPairs\SumEqualsNumPairs.csproj", "{CABFF0EF-D2BD-41FE-8C00-3DB418D26EFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{FFF6AF57-CD38-4AA1-A977-A39FA51AB513}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFF6AF57-CD38-4AA1-A977-A39FA51AB513}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFF6AF57-CD38-4AA1-A977-A39FA51AB513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CABFF0EF-D2BD-41FE-8C00-3DB418D26EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CABFF0EF-D2BD-41FE-8C00-3DB418D26EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CABFF0EF-D2BD-41FE-8C00-3DB418D26EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CABFF0EF-D2BD-41FE-8C00-3DB418D26EFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
