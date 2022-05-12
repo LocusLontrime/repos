@@ -17,8 +17,7 @@
         N = nums.Length; // nums length
 
         foreach (int i in nums) // dictionary building
-        {
-            int temp;
+        {          
             if (map.ContainsKey(i)) map[i]++;  
             else map.Add(i, 1);
         }

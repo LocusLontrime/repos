@@ -1,8 +1,10 @@
-﻿public class Factorization // Случайно оказалось здесь.)
+﻿using System.Diagnostics;
+
+public class Factorization // Случайно оказалось здесь.)
 {
     public static void Main(string[] args) // factorization of 124 -> 2 * 2 * 31
     {
-        long number = 100000000000000;
+        long number = 720;
 
         SortedDictionary<long, int> factorDictionary = factorizationFast(number);
 
@@ -16,6 +18,19 @@
             if (counter != factorDictionary.Count) Console.Write(pair.Key + "^" + pair.Value + " * ");
             else Console.Write(pair.Key + "^" + pair.Value);
         }
+
+        Stopwatch sw = new Stopwatch();
+
+        sw.Start();
+
+        for (int i = 2; i < 1000000; i++)
+        {
+            factorizationFast(i);
+        }
+
+        sw.Stop();
+
+        Console.WriteLine("Time elapsed: " + sw.ElapsedMilliseconds + "ms");
 
         /* List<int> primes = primesSearch(number);
 

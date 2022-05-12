@@ -1,13 +1,14 @@
 ﻿using System.Text;
+
 public class GenerateParentheses22 
 {
     public static IList<string> list;
     public static int N;
     public static void Main(string[] args)
     {
-        IList<string> list = GenerateParenthesis(9);
+        IList<string> list = GenerateParenthesis(12);
         Console.WriteLine(list.Count);
-        foreach (string s in list) Console.WriteLine(s); ;
+        //foreach (string s in list) Console.WriteLine(s); ;
     }
 
     public static IList<string> GenerateParenthesis(int n)

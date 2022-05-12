@@ -1,5 +1,6 @@
 ﻿public class Task3 // Дано натульное число n > 1. Вывести все простые множители данного числа
 {
+    // обнаружен баг, метод был доработан в Factorization.sln
 
     static void Main(string[] args)
     {

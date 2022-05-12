@@ -1,6 +1,7 @@
 ﻿using System.Numerics;
 
 public class Fibonacci { // 4 methods of calculating Fibonacci from the least optimized to the most one
+                         // 3kyu diff Task from codewars.com accepted
 
     static long[] memo_table;
 
@@ -12,8 +13,8 @@ public class Fibonacci { // 4 methods of calculating Fibonacci from the least op
     {
         //Console.WriteLine(fibonacci_recursive(43)); // very dangerous calculation, if n > 43 the runtime begins to terrify 
         //Console.WriteLine(fib_memo(10000));
-        //Console.WriteLine(fib_bot_up(1000000)); 
-        Console.WriteLine(fib_maxrix_fast(10000000));
+        //Console.WriteLine(fib_bot_up(2000000)); 
+        Console.WriteLine(fib_matrix_fast(-2));
     }
 
     public static long fibonacci_recursive(int n) // the least optimized method -> just for understanding how dangerous the recursion without memoization can be
@@ -51,14 +52,19 @@ public class Fibonacci { // 4 methods of calculating Fibonacci from the least op
             fib_1before = fib_1before + fib_2before;
             fib_2before = fib_1before - fib_2before;
         }
+
         return fib_1before;
     }
 
-    public static BigInteger fib_maxrix_fast(long N) { // a fastest one, uses matrix representation of Fibonacci numbers and fast power rising
-
-        return matrix_pow_recursive(fibonacci_matrix, N)[0, 1];
-
+    // a fastest one, uses matrix representation of Fibonacci numbers and fast power rising
+    public static BigInteger fib_matrix_fast(long N) // can handle the negative indexed Fib numbers
+    { 
+        if (N < 0) return -N % 2 != 0 ? 
+                matrix_pow_recursive(fibonacci_matrix, -N)[0, 1] :
+                -matrix_pow_recursive(fibonacci_matrix, -N)[0, 1];
+        return matrix_pow_recursive(fibonacci_matrix, N)[0, 1]; 
     }
+    
 
     public static BigInteger[,] matrix_pow_recursive(BigInteger[,] matrix, long N) // fast power rising
     {

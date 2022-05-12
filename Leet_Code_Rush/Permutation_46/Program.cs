@@ -5,9 +5,9 @@
 
     static void Main(string[] args)
     {
-        Permute(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        Permute(new int[] { 1, 2, 3});
 
-        // PrintPermutations();
+        PrintPermutations();
     }
 
     public static IList<IList<int>> Permute(int[] nums)

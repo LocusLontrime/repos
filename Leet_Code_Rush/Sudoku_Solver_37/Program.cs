@@ -17,6 +17,8 @@ public class SudokuSolver37 // accepted (speed: 148ms, very fast, beats 93.12% o
 
     public static bool isSolved; // is Sudoku solved or not
 
+    public static int solutionsCounter; // if > 2 then there are multiple solutions
+
     public static void Main(string[] args)
     {
         char[,] board = { // some test case

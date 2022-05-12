@@ -8,13 +8,13 @@
         Console.WriteLine("\n" + IsYearLeapRec(1888));
     }
 
-    public static bool IsYearLeap(int year)
+    public static bool IsYearLeap(int year) // a fast and good method
     {
         if (year % 100 == 0) return year % 400 == 0;
         return year % 4 == 0;
     }
 
-    public static bool IsYearLeapRec(int year)
+    public static bool IsYearLeapRec(int year) // rec method, just a study case
     { 
         if (year > 400) return IsYearLeap(year - 400);
         else if (year == 400) return true;
