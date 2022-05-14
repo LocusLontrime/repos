@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-public class HardSudokuSolver // 2KYU
+public class HardSudokuSolver // 2KYU, not accepted on codewars, coz too slow
 {
     // Here we will be storing the information about placed numbers. According to the Sudoku-game rules,
     // We need to keep sets of rows, columns and squares so that the numbers do not repeat in these sets.

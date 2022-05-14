@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlidingPuzzleSolver", "..\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permutations", "Permutations\Permutations.csproj", "{2D492185-22AD-4F1A-9E83-4E72EB082F73}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permut", "Permut\Permut.csproj", "{C7A09252-F0EA-4734-910D-3E3A088B7714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permut_4kyu", "Permut\Permut_4kyu.csproj", "{C7A09252-F0EA-4734-910D-3E3A088B7714}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find_the_cheapest_path", "Find_the_cheapest_path\Find_the_cheapest_path.csproj", "{F939AB1A-E4F3-4042-8080-1C49A10FB128}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardSudokuSolver", "HardSudokuSolver\HardSudokuSolver.csproj", "{7A982653-E485-43D0-A637-14CC286094EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixDeterminant", "MatrixDeterminant\MatrixDeterminant.csproj", "{D390EB76-71C0-4321-86C4-DCC0A8B9C614}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixDeterminant_4kyu", "MatrixDeterminant\MatrixDeterminant_4kyu.csproj", "{D390EB76-71C0-4321-86C4-DCC0A8B9C614}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SudokuSolutionValidator", "SudokuSolutionValidator\SudokuSolutionValidator.csproj", "{A794011F-7DCC-411D-9944-6001F49D42E6}"
 EndProject
@@ -35,13 +35,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nonogram_Solver_15x15_2kyu"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Make_a_spiral_3kyu", "Make_a_spiral_3kyu\Make_a_spiral_3kyu.csproj", "{E6AD09A4-E56F-45AA-841F-BB5C838EDE9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_n_Cycle", "1_n_Cycle\1_n_Cycle.csproj", "{9267471B-B078-4CA9-8B6E-15C5410C49A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_n_Cycle_6kyu", "1_n_Cycle\1_n_Cycle_6kyu.csproj", "{9267471B-B078-4CA9-8B6E-15C5410C49A5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valid_Parentheses_5kyu", "Valid_Parentheses_5kyu\Valid_Parentheses_5kyu.csproj", "{A8CC54C7-7495-4B8B-90C6-11D60E62EA65}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pascals_Diagonals_5kyu", "Pascals_Diagonals_5kyu\Pascals_Diagonals_5kyu.csproj", "{F7334670-ABD4-4B4A-AB84-DD3485F2D609}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battleship_field_validator_3kyu", "Battleship_field_validator_3kyu\Battleship_field_validator_3kyu.csproj", "{B623FBE8-39F0-4831-8A69-45B3DC0BE983}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Battleship_field_validator_3kyu", "Battleship_field_validator_3kyu\Battleship_field_validator_3kyu.csproj", "{B623FBE8-39F0-4831-8A69-45B3DC0BE983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binomial_Expansion_3kyu", "Binomial_Expansion_3kyu\Binomial_Expansion_3kyu.csproj", "{9C1C1FC4-BAF2-48EE-A5CD-3D447172D584}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple_Fun_79_Delete_a_Digit_6kyu", "Simple_Fun_79_Delete_a_Digit_kyu\Simple_Fun_79_Delete_a_Digit_6kyu.csproj", "{E0F4904D-0417-4866-AA9C-D5E51ED2CF64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Some_Egyptian_fractions_5kyu", "Some_Egyptian_fractions_5kyu\Some_Egyptian_fractions_5kyu.csproj", "{B9640987-D846-487C-8782-7C315FDC7B8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moving_Zeros_To_The_End_5kyu", "Moving_Zeros_To_The_End_5kyu\Moving_Zeros_To_The_End_5kyu.csproj", "{999FA780-BD2F-40AB-8879-0C167168A80D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_fusc_function_Part_2", "The_fusc_function_Part_2\The_fusc_function_Part_2.csproj", "{58C936CF-0DF1-4BF7-B4C8-11AB31066598}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +139,26 @@ Global
 		{B623FBE8-39F0-4831-8A69-45B3DC0BE983}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B623FBE8-39F0-4831-8A69-45B3DC0BE983}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B623FBE8-39F0-4831-8A69-45B3DC0BE983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1C1FC4-BAF2-48EE-A5CD-3D447172D584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1C1FC4-BAF2-48EE-A5CD-3D447172D584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1C1FC4-BAF2-48EE-A5CD-3D447172D584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1C1FC4-BAF2-48EE-A5CD-3D447172D584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F4904D-0417-4866-AA9C-D5E51ED2CF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F4904D-0417-4866-AA9C-D5E51ED2CF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F4904D-0417-4866-AA9C-D5E51ED2CF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F4904D-0417-4866-AA9C-D5E51ED2CF64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9640987-D846-487C-8782-7C315FDC7B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9640987-D846-487C-8782-7C315FDC7B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9640987-D846-487C-8782-7C315FDC7B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9640987-D846-487C-8782-7C315FDC7B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999FA780-BD2F-40AB-8879-0C167168A80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999FA780-BD2F-40AB-8879-0C167168A80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999FA780-BD2F-40AB-8879-0C167168A80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999FA780-BD2F-40AB-8879-0C167168A80D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C936CF-0DF1-4BF7-B4C8-11AB31066598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C936CF-0DF1-4BF7-B4C8-11AB31066598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C936CF-0DF1-4BF7-B4C8-11AB31066598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C936CF-0DF1-4BF7-B4C8-11AB31066598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

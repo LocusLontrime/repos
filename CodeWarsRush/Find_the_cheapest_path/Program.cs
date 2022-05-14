@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-public class FindTheCheapestPath 
+public class FindTheCheapestPath // not accepted on codewars.com coz too slow
 {
     public static int counterRec;
 
