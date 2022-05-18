@@ -22,7 +22,7 @@
             {1, 1, 1, 1, 1}
         };
 
-        Print_2D_array(Spiralize(15));
+        Print_2D_array(Spiralize(65));
     }
 
     public static int[,] Spiralize(int size)

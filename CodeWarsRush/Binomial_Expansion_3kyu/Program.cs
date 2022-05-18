@@ -339,6 +339,8 @@ public class BinomialExpansion // accepted on codewars
         Console.WriteLine(Expand("(x-1)^1"));
         Console.WriteLine(Expand("(-2k-3)^3"));
         Console.WriteLine(Expand("(r+0)^203"));
+
+        Console.WriteLine(Expand("(r+1)^25"));
     }
 
     public static string Expand(string expr)

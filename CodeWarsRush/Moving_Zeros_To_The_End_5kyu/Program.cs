@@ -1,4 +1,4 @@
-﻿public class ZerosToTheEnd
+﻿public class ZerosToTheEnd // accepted on codewars.com
 {
     static void Main(string[] args)
     {
