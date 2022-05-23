@@ -75,23 +75,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Range_Extraction_4kyu", "Ra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "How_many_numbers_III_4kyu", "How_many_numbers_III_4kyu\How_many_numbers_III_4kyu.csproj", "{F1BF9032-471A-41AF-820A-1393A14E4BDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_Parasitic_Numbers_Ending_in_N_3kyu", "N_Parasitic_Numbers_Ending_in_N_3kyu\N_Parasitic_Numbers_Ending_in_N_3kyu.csproj", "{FC815536-A0FB-49E2-AF57-D0C4CE0207FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "N_Parasitic_Numbers_Ending_in_N_3kyu", "N_Parasitic_Numbers_Ending_in_N_3kyu\N_Parasitic_Numbers_Ending_in_N_3kyu.csproj", "{FC815536-A0FB-49E2-AF57-D0C4CE0207FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Last_digit_of_a_huge_number_3kyu", "Last_digit_of_a_huge_number_3kyu\Last_digit_of_a_huge_number_3kyu.csproj", "{A878AB63-E29D-4789-A9D5-2AF2013F4201}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Last_digit_of_a_huge_number_3kyu", "Last_digit_of_a_huge_number_3kyu\Last_digit_of_a_huge_number_3kyu.csproj", "{A878AB63-E29D-4789-A9D5-2AF2013F4201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Block_sequence_4kyu", "Block_sequence_4kyu\Block_sequence_4kyu.csproj", "{35C34D05-57D3-4560-BE4B-401F09AE12F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Block_sequence_4kyu", "Block_sequence_4kyu\Block_sequence_4kyu.csproj", "{35C34D05-57D3-4560-BE4B-401F09AE12F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Count_ones_in_a_segment_4kyu", "Count_ones_in_a_segment_4kyu\Count_ones_in_a_segment_4kyu.csproj", "{71B6E2D5-D929-462C-A67B-5DC320CF2A99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Count_ones_in_a_segment_4kyu", "Count_ones_in_a_segment_4kyu\Count_ones_in_a_segment_4kyu.csproj", "{71B6E2D5-D929-462C-A67B-5DC320CF2A99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple_Fun_27_Rectangle_Rotation_4kyu", "Simple_Fun_27_Rectangle_Rotation_4kyu\Simple_Fun_27_Rectangle_Rotation_4kyu.csproj", "{B8F24E7D-8ED3-4215-A5E1-9F09D3334110}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple_Fun_27_Rectangle_Rotation_4kyu", "Simple_Fun_27_Rectangle_Rotation_4kyu\Simple_Fun_27_Rectangle_Rotation_4kyu.csproj", "{B8F24E7D-8ED3-4215-A5E1-9F09D3334110}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Longest_Common_Subsequence _Performance_version_4kyu", "Longest_Common_Subsequence _Performance_version_4kyu\Longest_Common_Subsequence _Performance_version_4kyu.csproj", "{D113A620-5764-42CF-834F-3073E43E4CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Longest_Common_Subsequence _Performance_version_4kyu", "Longest_Common_Subsequence _Performance_version_4kyu\Longest_Common_Subsequence _Performance_version_4kyu.csproj", "{D113A620-5764-42CF-834F-3073E43E4CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validate_Sudoku_with_size _NxN_4kyu", "Validate_Sudoku_with_size _NxN_4kyu\Validate_Sudoku_with_size _NxN_4kyu.csproj", "{5EF3F481-CF17-4737-BAA1-381E7756BDD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Validate_Sudoku_with_size _NxN_4kyu", "Validate_Sudoku_with_size _NxN_4kyu\Validate_Sudoku_with_size _NxN_4kyu.csproj", "{5EF3F481-CF17-4737-BAA1-381E7756BDD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum_of_Intervals_4kyu", "Sum_of_Intervals_4kyu\Sum_of_Intervals_4kyu.csproj", "{60CC4E55-AF95-451C-BFBF-D2B15D6F061E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sum_of_Intervals_4kyu", "Sum_of_Intervals_4kyu\Sum_of_Intervals_4kyu.csproj", "{60CC4E55-AF95-451C-BFBF-D2B15D6F061E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shortest_steps_to_a_number_6kyu", "Shortest_steps_to_a_number_6kyu\Shortest_steps_to_a_number_6kyu.csproj", "{E49F0675-7E7B-42EE-A8F4-E4176405CC9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shortest_steps_to_a_number_6kyu", "Shortest_steps_to_a_number_6kyu\Shortest_steps_to_a_number_6kyu.csproj", "{E49F0675-7E7B-42EE-A8F4-E4176405CC9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Expressions", "Expressions\Expressions.csproj", "{809EE708-6AC0-45D4-AECD-3ABE8ED69617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alphabetic_Anagrams_3kyu", "Alphabetic_Anagrams_3kyu\Alphabetic_Anagrams_3kyu.csproj", "{B656D03D-D47F-4A80-9D44-2525A6B2752C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -279,6 +283,14 @@ Global
 		{E49F0675-7E7B-42EE-A8F4-E4176405CC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E49F0675-7E7B-42EE-A8F4-E4176405CC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E49F0675-7E7B-42EE-A8F4-E4176405CC9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809EE708-6AC0-45D4-AECD-3ABE8ED69617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809EE708-6AC0-45D4-AECD-3ABE8ED69617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809EE708-6AC0-45D4-AECD-3ABE8ED69617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809EE708-6AC0-45D4-AECD-3ABE8ED69617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B656D03D-D47F-4A80-9D44-2525A6B2752C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B656D03D-D47F-4A80-9D44-2525A6B2752C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B656D03D-D47F-4A80-9D44-2525A6B2752C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B656D03D-D47F-4A80-9D44-2525A6B2752C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

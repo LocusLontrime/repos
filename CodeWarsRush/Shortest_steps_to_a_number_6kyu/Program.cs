@@ -1,18 +1,17 @@
-﻿public class ShortestStepsToNumber
+﻿public class ShortestStepsToNumber // accepted on codewars.com
 {
     public static int[] memoTable;
 
     static void Main(string[] args)
     {
         int n = 9999;
-
         Console.WriteLine($"Shortest way to number {n} = {ShortestStepsToNum(n)}");
+
+        Console.WriteLine($"Shortest way to number {n} = {RecSeekerFast(n)}");
     }
 
     public static int ShortestStepsToNum(int num)
-    {
-        // Good Luck!
-
+    {     
         memoTable = new int[num + 1];
 
         return RecSeeker(num);
@@ -28,4 +27,6 @@
 
         return memoTable[num];
     }
+
+    public static int RecSeekerFast(int num) => num == 1 ? 0 : num % 2 == 0 ? RecSeekerFast(num / 2) + 1 : RecSeekerFast(num - 1) + 1;   
 }

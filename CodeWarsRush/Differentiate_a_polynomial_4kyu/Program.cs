@@ -74,7 +74,7 @@ public class DiffPol
 
                 this.polynomial[power] = num;
 
-                if (j == s.Length - 1 && digits.Contains(s[j])) break;
+                if (j == s.Length - 1 && digits.Contains((int)Char.GetNumericValue(s[j]))) break;
             
                 if (j < s.Length && s[j] == '+') j++;
             }   
