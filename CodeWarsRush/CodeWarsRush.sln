@@ -95,7 +95,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shortest_steps_to_a_number_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Expressions", "Expressions\Expressions.csproj", "{809EE708-6AC0-45D4-AECD-3ABE8ED69617}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alphabetic_Anagrams_3kyu", "Alphabetic_Anagrams_3kyu\Alphabetic_Anagrams_3kyu.csproj", "{B656D03D-D47F-4A80-9D44-2525A6B2752C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alphabetic_Anagrams_3kyu", "Alphabetic_Anagrams_3kyu\Alphabetic_Anagrams_3kyu.csproj", "{B656D03D-D47F-4A80-9D44-2525A6B2752C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "What_is_a_Perfect_Power_anyway_5kyu", "What_is_a_Perfect_Power_anyway_5kyu\What_is_a_Perfect_Power_anyway_5kyu.csproj", "{EBF5C738-E490-487D-8D76-D13B8684187A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman_Numerals_Helper_4kyu", "Roman_Numerals_Helper_4kyu\Roman_Numerals_Helper_4kyu.csproj", "{A1033F4A-92B5-446E-92BC-6E99F8F92B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu", "Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu\Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu.csproj", "{DFEA5FB7-52CB-427E-8013-E122FCA15444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boggle_Word_Checker_4kyu", "Boggle_Word_Checker_4kyu\Boggle_Word_Checker_4kyu.csproj", "{AE087939-E35B-4AE4-8A9F-E921CCB996DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decimal_to_Factorial_and_Back_5kyu", "Decimal_to_Factorial_and_Back_5kyu\Decimal_to_Factorial_and_Back_5kyu.csproj", "{4EAB35E0-F22F-4717-A26E-D7D424FC2869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "How_many_are_smaller_than_me_3kyu_BST", "How_many_are_smaller_than_me_3kyu_BST\How_many_are_smaller_than_me_3kyu_BST.csproj", "{8F1A77AF-6A58-441F-8EFA-8570C3D28658}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -291,6 +303,30 @@ Global
 		{B656D03D-D47F-4A80-9D44-2525A6B2752C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B656D03D-D47F-4A80-9D44-2525A6B2752C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B656D03D-D47F-4A80-9D44-2525A6B2752C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF5C738-E490-487D-8D76-D13B8684187A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF5C738-E490-487D-8D76-D13B8684187A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF5C738-E490-487D-8D76-D13B8684187A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF5C738-E490-487D-8D76-D13B8684187A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1033F4A-92B5-446E-92BC-6E99F8F92B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1033F4A-92B5-446E-92BC-6E99F8F92B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1033F4A-92B5-446E-92BC-6E99F8F92B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1033F4A-92B5-446E-92BC-6E99F8F92B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFEA5FB7-52CB-427E-8013-E122FCA15444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFEA5FB7-52CB-427E-8013-E122FCA15444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFEA5FB7-52CB-427E-8013-E122FCA15444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFEA5FB7-52CB-427E-8013-E122FCA15444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE087939-E35B-4AE4-8A9F-E921CCB996DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE087939-E35B-4AE4-8A9F-E921CCB996DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE087939-E35B-4AE4-8A9F-E921CCB996DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE087939-E35B-4AE4-8A9F-E921CCB996DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAB35E0-F22F-4717-A26E-D7D424FC2869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAB35E0-F22F-4717-A26E-D7D424FC2869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAB35E0-F22F-4717-A26E-D7D424FC2869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAB35E0-F22F-4717-A26E-D7D424FC2869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1A77AF-6A58-441F-8EFA-8570C3D28658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1A77AF-6A58-441F-8EFA-8570C3D28658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1A77AF-6A58-441F-8EFA-8570C3D28658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F1A77AF-6A58-441F-8EFA-8570C3D28658}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

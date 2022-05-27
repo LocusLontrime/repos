@@ -5,7 +5,7 @@ public class Factorial_decomposition_fast_5kyu {
 
     public static SortedDictionary<long, int> factorDictionary = new SortedDictionary<long, int>();
 
-    public static List<int> primes = new List<int>();
+    public static List<long> primes = new List<long>();
 
     static void Main(string[] args)
     {
@@ -16,6 +16,13 @@ public class Factorial_decomposition_fast_5kyu {
         // String result = Decomp(17);
 
         string result = Decomp(50000);
+
+        // factorizationFast(600851475143);
+
+        foreach (var item in primes)
+        {
+            Console.WriteLine($"{item}");
+        }
 
         sw.Stop();
 
@@ -52,11 +59,11 @@ public class Factorial_decomposition_fast_5kyu {
         return s.ToString();
     }
 
-    public static void factorizationFast(int number)
+    public static void factorizationFast(long number)
     {
         int innerCounter;
 
-        int fixNumber = number;       
+        long fixNumber = number;       
 
         for (int i = 0; i < primes.Count && primes[i] * primes[i] <= fixNumber; i++)
         {
