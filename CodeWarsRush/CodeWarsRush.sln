@@ -101,13 +101,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "What_is_a_Perfect_Power_any
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman_Numerals_Helper_4kyu", "Roman_Numerals_Helper_4kyu\Roman_Numerals_Helper_4kyu.csproj", "{A1033F4A-92B5-446E-92BC-6E99F8F92B5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu", "Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu\Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu.csproj", "{DFEA5FB7-52CB-427E-8013-E122FCA15444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu", "Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu\Total_increasing_or_decreasing_numbers_up_to_a_power_of_10_4kyu.csproj", "{DFEA5FB7-52CB-427E-8013-E122FCA15444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boggle_Word_Checker_4kyu", "Boggle_Word_Checker_4kyu\Boggle_Word_Checker_4kyu.csproj", "{AE087939-E35B-4AE4-8A9F-E921CCB996DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boggle_Word_Checker_4kyu", "Boggle_Word_Checker_4kyu\Boggle_Word_Checker_4kyu.csproj", "{AE087939-E35B-4AE4-8A9F-E921CCB996DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decimal_to_Factorial_and_Back_5kyu", "Decimal_to_Factorial_and_Back_5kyu\Decimal_to_Factorial_and_Back_5kyu.csproj", "{4EAB35E0-F22F-4717-A26E-D7D424FC2869}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decimal_to_Factorial_and_Back_5kyu", "Decimal_to_Factorial_and_Back_5kyu\Decimal_to_Factorial_and_Back_5kyu.csproj", "{4EAB35E0-F22F-4717-A26E-D7D424FC2869}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "How_many_are_smaller_than_me_3kyu_BST", "How_many_are_smaller_than_me_3kyu_BST\How_many_are_smaller_than_me_3kyu_BST.csproj", "{8F1A77AF-6A58-441F-8EFA-8570C3D28658}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "How_many_are_smaller_than_me_3kyu_BST", "How_many_are_smaller_than_me_3kyu_BST\How_many_are_smaller_than_me_3kyu_BST.csproj", "{8F1A77AF-6A58-441F-8EFA-8570C3D28658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Closest_pair_of_points_in_linearithmic_time_3kyu", "Closest_pair_of_points_in_linearithmic_time_3kyu\Closest_pair_of_points_in_linearithmic_time_3kyu.csproj", "{99508F4D-9ECD-48E1-A2AC-01ED80E11D93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum_by_Factors_4kyu", "Sum_by_Factors_4kyu\Sum_by_Factors_4kyu.csproj", "{9C4BE20C-8E75-472A-8FBD-1167373A689B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Getting_along_with_Integer_Partitions_4kyu", "Getting_along_with_Integer_Partitions_4kyu\Getting_along_with_Integer_Partitions_4kyu.csproj", "{731D52F8-D688-4D42-8D2A-9F579A70F7F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -327,6 +333,18 @@ Global
 		{8F1A77AF-6A58-441F-8EFA-8570C3D28658}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F1A77AF-6A58-441F-8EFA-8570C3D28658}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F1A77AF-6A58-441F-8EFA-8570C3D28658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99508F4D-9ECD-48E1-A2AC-01ED80E11D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99508F4D-9ECD-48E1-A2AC-01ED80E11D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99508F4D-9ECD-48E1-A2AC-01ED80E11D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99508F4D-9ECD-48E1-A2AC-01ED80E11D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C4BE20C-8E75-472A-8FBD-1167373A689B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4BE20C-8E75-472A-8FBD-1167373A689B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4BE20C-8E75-472A-8FBD-1167373A689B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4BE20C-8E75-472A-8FBD-1167373A689B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731D52F8-D688-4D42-8D2A-9F579A70F7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731D52F8-D688-4D42-8D2A-9F579A70F7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731D52F8-D688-4D42-8D2A-9F579A70F7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731D52F8-D688-4D42-8D2A-9F579A70F7F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

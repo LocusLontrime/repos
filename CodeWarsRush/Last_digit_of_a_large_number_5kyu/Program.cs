@@ -1,5 +1,5 @@
 ﻿using System.Numerics;
-public class LastDigitOfLargeNumber
+public class LastDigitOfLargeNumber // accepted on codewars.com
 {
     public static int[][] powerCycles = new int[10][]
     {
@@ -19,60 +19,28 @@ public class LastDigitOfLargeNumber
 
     static void Main(string[] args)
     {
-        Console.WriteLine(LastDigit("3715290469715693021198967285016729344580685479654510946723",
-            "68819615221552997273737174557165657483427362207517952651"));
+        Console.WriteLine(LastDigit(BigInteger.Parse("36715290469715693021198967285016729344580685479654510946723"),
+            BigInteger.Parse("688196152215529972736737174557165657483427362207517952651")));
 
         Console.WriteLine(LastDigit(3, 516666));
     }
 
-    public static int LastDigit(string num, string power)
+    public static int LastDigit(BigInteger num, BigInteger power)
     {
-        if (num.Length == 0 || power.Length == 0) throw new ArgumentException("Num or power lengths cannot be less than 1");
-
-        BigInteger pow = BigInteger.Parse(power);
-        if (pow == 0) return 1;
-
-        int lastNumDigit = (int) char.GetNumericValue(num[num.Length - 1]);
-
-        if (nonCycleNums.Contains(lastNumDigit)) return lastNumDigit;    
-        
-        // Console.WriteLine($"last digit of num: {lastNumDigit}");
-       
-        // Console.WriteLine($"power = {pow}");
-
-        // Console.WriteLine($"powerCycles[lastNumDigit].Length: {powerCycles[lastNumDigit].Length}");
-
-        BigInteger res = (pow - 1) % powerCycles[lastNumDigit].Length;
-
-        // Console.WriteLine($"Big Integer res: {res}");
-
-        return powerCycles[lastNumDigit][(int) res];
-    }
-
-    public static int LastDigit(int num, int power) 
-    {
-        if (power == 0) return 1;
-
-        int lastNumDigit = num % 10;
-
-        if (nonCycleNums.Contains(lastNumDigit)) return lastNumDigit;
-
-        int res = (power - 1) % powerCycles[lastNumDigit].Length;
-
-        return powerCycles[lastNumDigit][(int)res];
-    }
-
-    public static int LastDigit(int[] array) 
-    {
-        int curre
-
-        for () 
+        if (power == 0) 
         { 
-
-
-
+            return 1;
         }
 
+        int lastNumDigit = (int) (num % 10);                                           
 
+        if (nonCycleNums.Contains(lastNumDigit)) 
+        { 
+            return lastNumDigit; 
+        } 
+ 
+        BigInteger res = (power - 1) % powerCycles[lastNumDigit].Length;
+
+        return powerCycles[lastNumDigit][(int) res];
     }
 }
