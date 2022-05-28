@@ -1,34 +1,15 @@
 ﻿using System.Diagnostics;
 using System.Linq;
-
-public class GettingAlongWithIntegerPartitions 
+// Locus_Lontrime's solution
+public class GettingAlongWithIntegerPartitions // accepted on codewars.com
 {
     public static HashSet<List<int>> partitionsSet = new HashSet<List<int>>();
     public static long recCounter;
 
     static void Main(string[] args)
     {
-
-
         Console.WriteLine(Part(5));
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public static string Part(long n) // n <= 50
     {
